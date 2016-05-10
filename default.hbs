@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/vendor/bootstrap.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/site.css"}}" />
+    {{ghost_head}}
+</head>
+<body class="site-wrapper">
+
+    <!-- Main navbar -->
+    <nav class="navbar">
+        <a href="/" class="navbar-brand"><img src="/assets/image/logo-ucsc.svg"></a>
+        <a href class="navbar-hamburger"><span></span></a>
+        <ul class="navbar-nav">
+            <li><a href>Overview</a></li>
+            <li><a href>Answers</a></li>
+            <li><a href>Vizualizations</a></li>
+            <li><a href>Discuss</a></li>
+            <li><a href>Subscribe</a></li>
+        </ul>
+    </nav>
+
+
+    {{!navigation}}
+    <!--<div>-->
+        <!--{{!{body}}}-->
+    <!--</div>-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    {{!ghost_foot}}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/site.js"}}"></script>
+</body>
+</html>

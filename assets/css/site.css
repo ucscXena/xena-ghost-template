@@ -1,0 +1,272 @@
+/**
+ * UCSC Xena Web
+ *
+ * Core less file, compiled to site.css and included in templates. Component-specific less to be
+ * included in the core site.css are imported here.
+ *
+ * Normalize, grid and responsive utilities not required as UCSC Xena includes a customized Bootstrap download
+ * containing this functionality. See /assets/css/vendor for Bootstrap files.
+ */
+/**
+ * UCSC Xena Web
+ *
+ * Animation mixins, keyframe definitions.
+ */
+@keyframes animate-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+@keyframes animate-out {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+/**
+ * UCSC Xena Web
+ *
+ * Color variables.
+ */
+/**
+ * UCSC Xena Web
+ *
+ * Implementation-specific rules.
+ */
+.site-wrapper {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+a:hover {
+  text-decoration: none;
+}
+/**
+ * UCSC Xena Web
+ *
+ * Font face rules for specifying custom fonts.
+ */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("/assets/font/SF-UI-Text-Regular.otf");
+}
+@font-face {
+  font-family: "San Francisco";
+  font-style: italic;
+  font-weight: 600;
+  src: url("/assets/font/SF-UI-Text-SemiboldItalic.otf");
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("/assets/font/SF-UI-Text-Bold.otf");
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 800;
+  src: url("/assets/font/SF-UI-Display-Black.otf");
+}
+/**
+ * UCSC Xena Web
+ *
+ * Media query-related variables.
+ *
+ * Responsive breakpoints match Bootstrap's media queries (see http://getbootstrap.com/css/#grid-media-queries):
+ *
+ * < 768px - extra small eg mobile (default)
+ * > 768px - small eg tablet
+ * > 992px - medium eg desktop
+ * > 1200px - large eg large devices
+ *
+ * Defining breakpoints outside of these values should be done with discretion, as these breakpoints are designed to
+ * work in conjunction with Bootstrap's grid functionality.
+ */
+/**
+ * UCSC Xena Web
+ *
+ * Nav-specific rules and mixins
+ */
+/**
+ * Variables
+ */
+/**
+ * Mixins
+ */
+/**
+ * Classes
+ */
+.navbar {
+  height: 125px;
+  margin: 0 15px;
+}
+.navbar .navbar-brand {
+  display: inline-block;
+  padding: 31px 0;
+}
+.navbar .navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar .navbar-nav li a {
+  font-size: 1.8rem;
+}
+/**
+ * Classes - media queries
+ */
+/**
+ * Extra small and small devices (mobile and tablet)
+ */
+@media screen and (max-width: 1199px) {
+  .navbar .navbar-hamburger {
+    float: right;
+    padding: 61px 20px;
+    z-index: 100;
+  }
+  .navbar .navbar-hamburger:hover span:after {
+    top: 10px;
+  }
+  .navbar .navbar-hamburger:hover span:before {
+    top: -10px;
+  }
+  .navbar .navbar-hamburger span {
+    background: none no-repeat scroll 0 0 #1a535c;
+    display: block;
+    height: 4px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 24px;
+    position: relative;
+  }
+  .navbar .navbar-hamburger span:after,
+  .navbar .navbar-hamburger span:before {
+    background: none no-repeat scroll 0 0 #1a535c;
+    display: block;
+    height: 4px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 24px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
+  .navbar .navbar-hamburger span:after {
+    top: 8px;
+  }
+  .navbar .navbar-hamburger span:before {
+    top: -8px;
+  }
+  .navbar .navbar-nav {
+    background-color: #1a535c;
+    height: 100%;
+    left: 0;
+    margin-top: 125px;
+    padding-top: 125px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+  }
+  .navbar .navbar-nav li a {
+    color: #ffffff;
+    display: block;
+    padding: 20px 0;
+  }
+  .navbar-open .navbar .navbar-hamburger:hover span:after,
+  .navbar-open .navbar .navbar-hamburger:hover span:before {
+    top: 0;
+  }
+  .navbar-open .navbar .navbar-hamburger span {
+    background-color: transparent;
+  }
+  .navbar-open .navbar .navbar-hamburger span:after {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .navbar-open .navbar .navbar-hamburger span:before {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .navbar-open .navbar .navbar-nav {
+    animation: animate-in 0.5s 1;
+    opacity: 1;
+  }
+  .navbar-closed .navbar .navbar-nav {
+    animation: animate-out 0.5s 1;
+    opacity: 0;
+  }
+}
+/**
+ * Medium and large devices (desktop up)
+ */
+@media screen and (min-width: 1199px) {
+  .navbar .navbar-hamburger {
+    display: none;
+  }
+  .navbar .navbar-nav {
+    display: block;
+    float: right;
+  }
+  .navbar .navbar-nav li {
+    float: left;
+    margin-left: 60px;
+  }
+  .navbar .navbar-nav li:first-child {
+    margin-left: 0;
+  }
+  .navbar .navbar-nav li a {
+    color: #1a535c;
+    display: block;
+    padding: 51px 0;
+  }
+}
+/**
+ * UCSC Xena Web
+ *
+ * Typography-related rules.
+ */
+body {
+  color: pink;
+  font-family: "San Francisco", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  color: inherit;
+}

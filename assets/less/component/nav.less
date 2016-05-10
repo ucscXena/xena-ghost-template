@@ -1,0 +1,175 @@
+/**
+ * UCSC Xena Web
+ *
+ * Nav-specific rules and mixins
+ */
+
+/**
+ * Variables
+ */
+@navbar-height: 125px;
+
+/**
+ * Mixins
+ */
+// Hamburger mixin - used by core hamburger element, and related pseudo-elements
+.hamburger-bar() {
+    background: none no-repeat scroll 0 0 @xena-green-dark;
+    display: block;
+    height: 4px;
+    .transition(all 0.3s ease);
+    width: 24px;
+}
+
+/**
+ * Classes
+ */
+.navbar {
+    height: @navbar-height; // 61px top/bottom padding, 63px height for logo
+    margin: 0 15px; // Add left/right gutter (to match container/row/col-x structure of body)
+    .navbar-brand {
+        display: inline-block;
+        padding: 31px 0;
+    }
+    .navbar-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            a {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+/**
+ * Classes - media queries
+ */
+
+/**
+ * Extra small and small devices (mobile and tablet)
+ */
+@media screen and (max-width: @screen-lg-min) {
+
+    .navbar {
+        .navbar-hamburger {
+            float:right;
+            padding: 61px 20px; // 61px top/bottom padding, 2px for meat in hamburger (middle bar)
+            z-index: 100;
+            &:hover {
+                span {
+                    &:after {
+                        top: 10px;
+                    }
+                    &:before {
+                        top: -10px;
+                    }
+                }
+            }
+            span {
+                .hamburger-bar();
+                position: relative;
+                &:after, &:before {
+                    .hamburger-bar();
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                }
+                &:after {
+                    top: 8px;
+                }
+                &:before {
+                    top: -8px;
+                }
+            }
+        }
+        .navbar-nav {
+            background-color: @xena-green-dark;
+            height: 100%;
+            left: 0;
+            margin-top: @navbar-height;
+            padding-top: @navbar-height;
+            position: fixed;
+            text-align: center;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            li {
+                a {
+                    color: @xena-white;
+                    display: block;
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+
+    // Show full-screen menu
+    .navbar-open {
+        .navbar {
+            .navbar-hamburger {
+                &:hover {
+                    span {
+                        &:after, &:before {
+                            top: 0;
+                        }
+                    }
+                }
+                span {
+                    background-color: transparent;
+                    &:after {
+                        top: 0;
+                        .transform(rotate(45deg));
+                    }
+                    &:before {
+                        top: 0;
+                        .transform(rotate(-45deg));
+                    }
+                }
+            }
+            .navbar-nav {
+                animation: animate-in 0.5s 1;
+                opacity: 1;
+            }
+        }
+    }
+
+    // Animate close of navbar menu
+    .navbar-closed {
+        .navbar {
+            .navbar-nav {
+                animation: animate-out 0.5s 1;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+/**
+ * Medium and large devices (desktop up)
+ */
+@media screen and (min-width: @screen-lg-min) {
+
+    .navbar {
+        .navbar-hamburger {
+            display: none;
+        }
+        .navbar-nav {
+            display: block;
+            float: right;
+            li {
+                float: left;
+                margin-left: 60px; // Spec'ed as 93px but changing to 60px to prevent wrap on smaller desktops
+                &:first-child {
+                    margin-left: 0;
+                }
+                a {
+                    color: @xena-green-dark;
+                    display: block;
+                    padding: 51px 0; // 51px top/bottom, plus 21px height for text
+                }
+            }
+        }
+    }
+}

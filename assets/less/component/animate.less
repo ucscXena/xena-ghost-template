@@ -1,0 +1,62 @@
+/**
+ * UCSC Xena Web
+ *
+ * Animation mixins, keyframe definitions.
+ */
+
+// Cross-browser transform declarations
+.transform(@transform) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -ms-transform: @transform;
+    -o-transform: @transform;
+    transform: @transform;
+}
+
+// Cross-browser transition declarations
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+// Cross-browser removal of all transitions
+.transition-none() {
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+// Animate fade in of elements with both display none and transition
+@keyframes animate-in {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
+
+// Animate fade out of elements with both display none and transition
+@keyframes animate-out {
+    0% {
+        display: block;
+        opacity: 1;
+    }
+    99% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: none;
+    }
+}
