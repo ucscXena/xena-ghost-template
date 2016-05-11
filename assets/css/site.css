@@ -60,6 +60,45 @@ a:hover {
 /**
  * Home page
  */
+.page-home .jumbotron div .col-xs-12 h1 {
+  color: #4ecdc4;
+  font-size: 155px;
+  font-weight: 800;
+  line-height: 185px;
+  margin: 40px 0 0 0;
+}
+@media (max-width: 767px) {
+  .page-home .jumbotron div .col-xs-12 h1 {
+    font-size: 130px;
+    line-height: 105px;
+    text-align: center;
+  }
+}
+.page-home .jumbotron div .col-xs-12 h3 {
+  color: #1a535c;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0;
+  padding: 10px 10px;
+}
+@media (max-width: 767px) {
+  .page-home .jumbotron div .col-xs-12 h3 {
+    line-height: 35px;
+  }
+}
+.page-home .jumbotron div .col-xs-12:nth-child(2) {
+  bottom: 20px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .page-home .jumbotron div .col-xs-12:nth-child(2) {
+    bottom: 0;
+    text-align: center;
+    top: 30px;
+  }
+}
 /**
  * UCSC Xena Web
  *

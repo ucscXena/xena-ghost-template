@@ -22,5 +22,43 @@ a {
  * Home page
  */
 .page-home {
-
+    .jumbotron{
+        div {
+            .col-xs-12 {
+                h1 {
+                    color: @xena-aqua;
+                    font-size: 155px;
+                    font-weight: 800;
+                    line-height: 185px;
+                    margin: 40px 0 0 0;
+                    @media(max-width: @screen-sm-min){
+                        font-size: 130px;
+                        line-height: 105px;
+                        text-align: center;
+                    }
+                }
+                h3 {
+                    color: @xena-green-dark;
+                    font-size: 34px;
+                    font-style: italic;
+                    font-weight: 600;
+                    line-height: 18px;
+                    margin: 0;
+                    padding: 10px 10px;
+                    @media(max-width: @screen-sm-min){
+                        line-height: 35px;
+                    }
+                }
+            }
+            .col-xs-12:nth-child(2) {
+                bottom : 20px;
+                position : relative;
+                @media(max-width: @screen-sm-min){
+                    bottom: 0;
+                    text-align: center;
+                    top: 30px;
+                }
+            }
+        }
+    }
 }
