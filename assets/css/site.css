@@ -97,6 +97,183 @@ a:hover {
     line-height: 18px;
   }
 }
+.page-home .button {
+  font-family: "San Francisco", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background: #ff6b6b;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  padding: 5px 20px;
+  -webkit-appearance: none;
+}
+.page-home .content-block {
+  overflow: hidden;
+  position: relative;
+}
+.page-home .content-block .image-wrap {
+  height: auto;
+  padding: 0 15px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.page-home .data-hub h6 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+  margin: 0;
+}
+.page-home .data-hub p {
+  font-family: "San Francisco", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 28px;
+}
+.page-home .data-hub span {
+  font-family: "San Francisco", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 18px;
+}
+.page-home .section {
+  min-height: 150px;
+  padding: 50px 0;
+  position: relative;
+}
+.page-home .section-white p {
+  font-family: "San Francisco", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  color: #1a535c;
+  margin: 0 0 30px;
+}
+.page-home .section-white .info {
+  display: none;
+}
+.page-home .section-red {
+  background: #ff6b6b;
+  padding: 100px 0 50px;
+}
+.page-home .section-red p {
+  font-family: "San Francisco", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 30px;
+}
+.page-home .section-green-dark {
+  background: #1a535c;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+.page-home .section-aqua {
+  background: #4ecdc4;
+}
+.page-home .section-aqua .content-left {
+  margin-bottom: 100px;
+}
+.page-home .section-aqua .content-right {
+  float: right;
+  z-index: 2;
+}
+/**
+ * Media Queries
+ */
+/**
+ * Small +
+ */
+@media screen and (min-width: 767px) {
+  .page-home .section-white {
+    min-height: 380px;
+  }
+}
+/**
+ * Medium +
+ */
+@media screen and (min-width: 991px) {
+  .page-home .content-block .image-wrap {
+    right: -40px;
+    margin: 60px 0 0;
+    width: 59.4%;
+  }
+  .page-home .data-hub h6 {
+    font-family: "San Francisco", sans-serif;
+    font-size: 34px;
+    font-style: italic;
+    font-weight: 600;
+    margin: 50px 0 10px;
+  }
+  .page-home .data-hub span {
+    font-family: "San Francisco", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .page-home .data-hub p {
+    font-family: "San Francisco", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .page-home .section-white .info {
+    display: block;
+  }
+  .page-home .section-red {
+    padding: 50px 0;
+  }
+  .page-home .section-green-dark {
+    background: #1a535c;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 43%;
+    z-index: 1;
+  }
+  .page-home .section-green-dark:before {
+    background: #1a535c;
+    position: absolute;
+    content: "";
+    left: -230px;
+    top: 0;
+    width: 500px;
+    height: 200%;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+}
+/**
+ * Large +
+ */
+@media screen and (min-width: 1199px) {
+  .content-block .image-wrap {
+    right: -40px;
+    margin: 60px 0 0;
+    width: 59.4%;
+  }
+  .section-green-dark:before {
+    left: -195px;
+  }
+}
 /**
  * UCSC Xena Web
  *
@@ -310,4 +487,12 @@ h5,
 h6 {
   font-family: inherit;
   color: inherit;
+}
+h6 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 30px 0 20px;
 }
