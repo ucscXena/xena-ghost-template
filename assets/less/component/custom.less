@@ -4,18 +4,22 @@
  * Implementation-specific rules.
  */
 
-// Fluid layout to max width of 1140px
-.site-wrapper {
-    max-width: 1170px; // 1140px max width as per mocks, plus 15px gutter
-    margin-left: auto;
-    margin-right: auto;
-}
-
 // Links
 a {
     &:hover {
         text-decoration: none;
     }
+}
+
+/**
+ * Mixins
+ */
+
+.font(@font-size,@font-weight,@font-style) {
+    font-family: "San Francisco", sans-serif;
+    font-size: @font-size;
+    font-style: @font-style;
+    font-weight: @font-weight;
 }
 
 /**
@@ -27,36 +31,35 @@ a {
             .col-xs-12 {
                 h1 {
                     color: @xena-aqua;
-                    font-size: 155px;
-                    font-weight: 800;
-                    line-height: 185px;
+                    .font(100px,800,normal);
                     margin: 40px 0 0 0;
-                    @media(max-width: @screen-sm-min){
-                        font-size: 130px;
-                        line-height: 105px;
-                        text-align: center;
+                    line-height: 80px;
+                    text-align: center;
+                    @media(min-width: @screen-md-min) {
+                        font-size: 155px;
+                        line-height: 185px;
+                        text-align: left;
                     }
                 }
                 h3 {
                     color: @xena-green-dark;
-                    font-size: 34px;
-                    font-style: italic;
-                    font-weight: 600;
-                    line-height: 18px;
+                    .font(24px,600,italic);
+                    line-height: 35px;
                     margin: 0;
                     padding: 10px 10px;
-                    @media(max-width: @screen-sm-min){
-                        line-height: 35px;
+                    @media(min-width: @screen-md-min) {
+                        font-size: 42px;
+                        line-height: 18px;
+                        text-align: left;
                     }
                 }
             }
             .col-xs-12:nth-child(2) {
-                bottom : 20px;
                 position : relative;
-                @media(max-width: @screen-sm-min){
-                    bottom: 0;
-                    text-align: center;
-                    top: 30px;
+                text-align: center;
+                top: 10px;
+                @media(min-width: @screen-md-min) {
+                    top: -10px;   
                 }
             }
         }
