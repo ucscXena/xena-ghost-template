@@ -26,41 +26,30 @@ a {
  * Home page
  */
 .page-home {
-    .jumbotron{
-        div {
-            .col-xs-12 {
-                h1 {
-                    color: @xena-aqua;
-                    .font(100px,800,normal);
-                    margin: 40px 0 0 0;
-                    line-height: 80px;
-                    text-align: center;
-                    @media(min-width: @screen-md-min) {
-                        font-size: 155px;
-                        line-height: 185px;
-                        text-align: left;
-                    }
-                }
-                h3 {
-                    color: @xena-green-dark;
-                    .font(24px,600,italic);
-                    line-height: 35px;
-                    margin: 0;
-                    padding: 10px 10px;
-                    @media(min-width: @screen-md-min) {
-                        font-size: 42px;
-                        line-height: 18px;
-                        text-align: left;
-                    }
-                }
+    .jumbotron {
+        text-align: center;
+        @media(min-width: @screen-md-min) {
+            text-align: left;
+        }
+        h1 {
+            color: @xena-aqua;
+            .font(100px,800,normal);
+            line-height: 80px;
+            margin: 40px 0 0 0;
+            @media(min-width: @screen-md-min) {
+                font-size: 155px;
+                line-height: 185px;
             }
-            .col-xs-12:nth-child(2) {
-                position : relative;
-                text-align: center;
-                top: 10px;
-                @media(min-width: @screen-md-min) {
-                    top: -10px;   
-                }
+        }
+        h3 {
+            color: @xena-green-dark;
+            .font(24px,600,italic);
+            line-height: 35px;
+            margin: 0;
+            padding: 10px 10px;
+            @media(min-width: @screen-md-min) {
+                font-size: 42px;
+                line-height: 18px;
             }
         }
     }

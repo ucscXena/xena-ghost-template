@@ -58,24 +58,30 @@ a:hover {
 /**
  * Home page
  */
-.page-home .jumbotron div .col-xs-12 h1 {
+.page-home .jumbotron {
+  text-align: center;
+}
+@media (min-width: 991px) {
+  .page-home .jumbotron {
+    text-align: left;
+  }
+}
+.page-home .jumbotron h1 {
   color: #4ecdc4;
   font-family: "San Francisco", sans-serif;
   font-size: 100px;
   font-style: normal;
   font-weight: 800;
-  margin: 40px 0 0 0;
   line-height: 80px;
-  text-align: center;
+  margin: 40px 0 0 0;
 }
 @media (min-width: 991px) {
-  .page-home .jumbotron div .col-xs-12 h1 {
+  .page-home .jumbotron h1 {
     font-size: 155px;
     line-height: 185px;
-    text-align: left;
   }
 }
-.page-home .jumbotron div .col-xs-12 h3 {
+.page-home .jumbotron h3 {
   color: #1a535c;
   font-family: "San Francisco", sans-serif;
   font-size: 24px;
@@ -86,20 +92,9 @@ a:hover {
   padding: 10px 10px;
 }
 @media (min-width: 991px) {
-  .page-home .jumbotron div .col-xs-12 h3 {
+  .page-home .jumbotron h3 {
     font-size: 42px;
     line-height: 18px;
-    text-align: left;
-  }
-}
-.page-home .jumbotron div .col-xs-12:nth-child(2) {
-  position: relative;
-  text-align: center;
-  top: 10px;
-}
-@media (min-width: 991px) {
-  .page-home .jumbotron div .col-xs-12:nth-child(2) {
-    top: -10px;
   }
 }
 /**
