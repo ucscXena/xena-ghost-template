@@ -1,16 +1,13 @@
-# Casper
+I) Setup Ghost
+- Download Ghost from Ghost.org (https://ghost.org/developers/)
+- Unzip and copy the contents into your directory and run "npm install --production"
+- Run Ghost and create the Administator account .
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+II) Setup Xena Theme
+- Navigate to the content/themes directory and checkout the Xena theme (git clone git@github.com:clevercanary/ucsc-xena-web.git)
+- Inside the theme run "npm install" to install the required node packages .
+- Go to the Ghost's admin panel , Navigate to the "General" tab and change the theme to Xena .
+- Restart Ghost to see the new theme .
 
-To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
-
-## Copyright & License
-
-Copyright (c) 2013-2016 Ghost Foundation - Released under the MIT License.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+III) Running the less watcher using Grunt 
+- Within the Xena theme , run "grunt pizza" . (pizza is the name assigned to the current less watcher)

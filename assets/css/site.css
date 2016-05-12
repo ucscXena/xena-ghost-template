@@ -49,17 +49,54 @@
  *
  * Implementation-specific rules.
  */
-.site-wrapper {
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-}
 a:hover {
   text-decoration: none;
 }
 /**
+ * Mixins
+ */
+/**
  * Home page
  */
+.page-home .jumbotron {
+  text-align: center;
+}
+@media (min-width: 991px) {
+  .page-home .jumbotron {
+    text-align: left;
+  }
+}
+.page-home .jumbotron h1 {
+  color: #4ecdc4;
+  font-family: "San Francisco", sans-serif;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 80px;
+  margin: 40px 0 0 0;
+}
+@media (min-width: 991px) {
+  .page-home .jumbotron h1 {
+    font-size: 155px;
+    line-height: 185px;
+  }
+}
+.page-home .jumbotron h3 {
+  color: #1a535c;
+  font-family: "San Francisco", sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 35px;
+  margin: 0;
+  padding: 10px 10px;
+}
+@media (min-width: 991px) {
+  .page-home .jumbotron h3 {
+    font-size: 42px;
+    line-height: 18px;
+  }
+}
 /**
  * UCSC Xena Web
  *
@@ -225,6 +262,7 @@ a:hover {
   .navbar-open .navbar .navbar-nav {
     animation: animate-in 0.5s 1;
     opacity: 1;
+    z-index: 999;
   }
   .navbar-closed .navbar .navbar-nav {
     animation: animate-out 0.5s 1;

@@ -4,13 +4,6 @@
  * Implementation-specific rules.
  */
 
-// Fluid layout to max width of 1140px
-.site-wrapper {
-    max-width: 1170px; // 1140px max width as per mocks, plus 15px gutter
-    margin-left: auto;
-    margin-right: auto;
-}
-
 // Links
 a {
     &:hover {
@@ -19,8 +12,45 @@ a {
 }
 
 /**
+ * Mixins
+ */
+
+.font(@font-size,@font-weight,@font-style) {
+    font-family: "San Francisco", sans-serif;
+    font-size: @font-size;
+    font-style: @font-style;
+    font-weight: @font-weight;
+}
+
+/**
  * Home page
  */
 .page-home {
-
+    .jumbotron {
+        text-align: center;
+        @media(min-width: @screen-md-min) {
+            text-align: left;
+        }
+        h1 {
+            color: @xena-aqua;
+            .font(100px,800,normal);
+            line-height: 80px;
+            margin: 40px 0 0 0;
+            @media(min-width: @screen-md-min) {
+                font-size: 155px;
+                line-height: 185px;
+            }
+        }
+        h3 {
+            color: @xena-green-dark;
+            .font(24px,600,italic);
+            line-height: 35px;
+            margin: 0;
+            padding: 10px 10px;
+            @media(min-width: @screen-md-min) {
+                font-size: 42px;
+                line-height: 18px;
+            }
+        }
+    }
 }
