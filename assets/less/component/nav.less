@@ -48,9 +48,9 @@
  */
 
 /**
- * Extra small and small devices (mobile and tablet)
+ * Extra small and small devices - show hamburger
  */
-@media screen and (max-width: @screen-lg-min) {
+@media screen and (max-width: @screen-sm-max) {
 
     .navbar {
         .navbar-hamburger {
@@ -148,9 +148,9 @@
 }
 
 /**
- * Medium and large devices (desktop up)
+ * Medium and large devices (desktop up) - hide hamburger, show straight-up menu
  */
-@media screen and (min-width: @screen-lg-min) {
+@media screen and (min-width: @screen-md-min) {
 
     .navbar {
         .navbar-hamburger {
@@ -161,7 +161,7 @@
             float: right;
             li {
                 float: left;
-                margin-left: 60px; // Spec'ed as 93px but changing to 60px to prevent wrap on smaller desktops
+                margin-left: 60px; // Spec'ed as 75px but changing to 60px to prevent wrap on smaller screen
                 &:first-child {
                     margin-left: 0;
                 }
@@ -170,6 +170,20 @@
                     display: block;
                     padding: 51px 0; // 51px top/bottom, plus 21px height for text
                 }
+            }
+        }
+    }
+}
+
+/**
+ * Medium and large devices (desktop up) - hide hamburger, show straight-up menu
+ */
+@media screen and (min-width: @screen-lg-min) {
+
+    .navbar {
+        .navbar-nav {
+            li {
+                margin-left: 75px;
             }
         }
     }

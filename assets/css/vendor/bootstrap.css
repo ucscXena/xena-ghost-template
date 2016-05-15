@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=69a4096ad71a70f12d0184a881cc0d0f)
- * Config saved to config.json and https://gist.github.com/69a4096ad71a70f12d0184a881cc0d0f
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=8944d299c88f6ec42676d36e7be725d7)
+ * Config saved to config.json and https://gist.github.com/8944d299c88f6ec42676d36e7be725d7
  */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -315,9 +315,9 @@ hr {
     width: 970px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .container {
-    width: 1170px;
+    width: 1440px;
   }
 }
 .container-fluid {
@@ -808,7 +808,7 @@ hr {
     margin-left: 0%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
   }
@@ -1099,7 +1099,7 @@ hr {
     display: inline-block !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1439px) {
   .visible-md {
     display: block !important;
   }
@@ -1114,22 +1114,22 @@ hr {
     display: table-cell !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1439px) {
   .visible-md-block {
     display: block !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1439px) {
   .visible-md-inline {
     display: inline !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1439px) {
   .visible-md-inline-block {
     display: inline-block !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .visible-lg {
     display: block !important;
   }
@@ -1144,17 +1144,17 @@ hr {
     display: table-cell !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .visible-lg-block {
     display: block !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .visible-lg-inline {
     display: inline !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .visible-lg-inline-block {
     display: inline-block !important;
   }
@@ -1169,12 +1169,12 @@ hr {
     display: none !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1439px) {
   .hidden-md {
     display: none !important;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .hidden-lg {
     display: none !important;
   }

@@ -1,0 +1,43 @@
+/**
+ * UCSC Xena Web
+ *
+ * For use in dev environment only - not to be used in production.
+ *
+ * Debugging tools:
+ *
+ * - Adds different background colors at breakpoints
+ */
+
+/**
+ * Extra small
+ */
+body {
+    background-color: cornsilk;
+}
+
+/**
+ * Small
+ */
+@media screen and (min-width: @screen-sm-min) {
+    body {
+        background-color: lightcoral;
+    }
+}
+
+/**
+ * Medium
+ */
+@media screen and (min-width: @screen-md-min) {
+    body {
+        background-color: coral;
+    }
+}
+
+/**
+ * Large
+ */
+@media screen and (min-width: @screen-lg-min) {
+    body {
+        background-color: cornflowerblue;
+    }
+}

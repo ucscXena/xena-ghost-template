@@ -14,15 +14,6 @@ a {
 /**
  * Mixins
  */
-
-.font(@font-size,@font-weight,@font-style) {
-
-    font-family: "San Francisco", sans-serif;
-    font-size: @font-size;
-    font-style: @font-style;
-    font-weight: @font-weight;
-}
-
 .rounded(@radius:4px) {
     -webkit-border-radius: @radius;
     -moz-border-radius: @radius;
@@ -34,110 +25,86 @@ a {
  * Home page
  */
 .page-home {
+    // Jumbotron
     .jumbotron {
+        // Padding of jumbotron calculated as:
+        // Top: padding top + line height of h1 + margin bottom of header = 52px
+        // Bottom: padding bottom + height height of h3 = 34px
+        padding-top: 16px;
+        padding-bottom: 30px;
         text-align: center;
-        @media(min-width: @screen-md-min) {
-            text-align: left;
-        }
         h1 {
             color: @xena-aqua;
-            .font(100px,800,normal);
+            .font(100px, 800);
             line-height: 80px;
-            margin: 40px 0 0 0;
-            @media(min-width: @screen-md-min) {
-                font-size: 155px;
-                line-height: 185px;
-            }
+            margin: 0 0 15px 0; // Line height of h1 and h3 + margin = 25px
+            padding: 0;
         }
         h3 {
             color: @xena-green-dark;
-            .font(24px,600,italic);
+            .font(24px, 600, italic);
             line-height: 35px;
             margin: 0;
-            padding: 10px 10px;
-            @media(min-width: @screen-md-min) {
-                font-size: 42px;
-                line-height: 18px;
+            padding: 0;
+        }
+    }
+
+    // Overview
+    .overview {
+        .value-prop-description {
+            color: @xena-green-dark;
+            .font(28px, 18px);
+            img {
+                display: block;
+                width: 100%;
             }
         }
-    }
-    .button {
-        .font(20px,700,normal);
-        .rounded(4px);
-        background: @xena-peach;
-        border: none;
-        color: @xena-white;
-        outline: none;
-        padding: 5px 20px;
-        -webkit-appearance: none;
-    }
-    .content-block {
-        overflow: hidden;
-        position: relative;
-        .image-wrap {
-            height: auto;
-            padding: 0 15px;
-            position: absolute;
-            width: 100%;
-            z-index: 1;
-        }
-    }
-    .data-hub {
-        h6 {
-            .font(24px,600,italic);
-            margin: 0;
-        }
-        p {
-            .font(16px,700,normal);
+        .section {
             color: @xena-white;
-            line-height: 28px;
+            h6 {
+                .font(34px, 600);
+                line-height: 1; // Spec'ed at 18px, changing to 1 to handle wrapped text on mobile
+                margin: 0;
+            }
+            p {
+                .font(20px, 700);
+                color: @xena-white;
+                line-height: 28px;
+                margin: 27px 0 0; // Line height + margin = 30px
+            }
         }
-        span {
-            .font(18px,700,normal);
-            color: @xena-white;
-            line-height: 18px;
+        .section-peach {
+            background: @xena-peach;
+            margin-top: -40%; // Scoot up Xena public/private image
+            padding-top: 48%;
+            padding-bottom: 58px; // No mocks - matching with padding top of public/private section, squashing for mobile
         }
-    }
-    .section {
-        min-height: 150px;
-        padding: 50px 0;
-        position: relative;
-    }
-    .section-white {
-        p {
-            .font(28px,400,normal);
-            color: @xena-green-dark;
-            margin: 0 0 30px;
+        .public-private {
+            .section {
+                padding-bottom: 71px; // No mocks - squashing for mobile
+                padding-top: 58px; // Line height of h6 + padding top = 110px, no mocks - squashing for mobile
+                h6 {
+                    font-style: italic;
+                }
+                strong {
+                    display: block;
+                    .font(28px, 700);
+                    color: @xena-white;
+                    line-height: 28px;
+                    margin-top: 13px;
+                }
+                .button {
+                    margin-top: 50px;
+                }
+            }
         }
-        .info {
-            display: none;
+        // Background colors specified for public/private data hub sections mobile (background is handled by
+        // after pseudo element on medium + devices to handle skew)
+        .section-public {
+            background-color: @xena-aqua
         }
-    }
-    .section-red {
-        background: @xena-peach;
-        padding: 100px 0 50px;
-        p {
-            .font(20px,400,normal);
-            color: @xena-white;
-            margin: 0 0 30px;
-        }
-    }
-    .section-green-dark {
-        background: @xena-green-dark;
-        height: 50%;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        z-index: 1;
-    }
-    .section-aqua {
-        background: @xena-aqua;
-        .content-left {
-            margin-bottom: 100px;
-        }
-        .content-right {
-            float: right;
-            z-index: 2;
+        .section-private {
+            background-color: @xena-green-dark;
         }
     }
 }
@@ -150,61 +117,121 @@ a {
  * Small +
  */
 @media screen and (min-width: @screen-sm-min) {
-    .page-home {
-        .section-white {
-            min-height: 380px;
-        }
-    }
 }
 
 /**
  * Medium +
  */
 @media screen and (min-width: @screen-md-min) {
+
+    // Home page
     .page-home {
-        .content-block {
-            .image-wrap {
-                right: -40px;
-                margin: 60px 0 0;
-                width: 59.4%;
+        // Jumbotron
+        .jumbotron {
+            // Padding of jumbotron calculated as:
+            // Top: padding top + line height of h1 + margin bottom of header = 109px
+            // Bottom: padding bottom + height height of h3 = 60px
+            padding-top: 37px ;
+            padding-bottom: 65px;
+            text-align: left;
+            h1 {
+                font-size: 155px;
+                line-height: 185px;
+            }
+            h3 {
+                font-size: 42px;
+                line-height: 18px;
+                margin-top: -12px; // Line height of h1 and h3 + margin = 15px
             }
         }
-        .data-hub {
-            h6 {
-                .font(34px,600,italic);
-                margin: 50px 0 10px;
+        // Overview
+        .overview {
+            .value-prop-description {
+                margin-bottom: 76px; // Line height of p + margin = 80px
+                p {
+                    font-size: 26px; // Off the mocks - squashing for medium only, 28px pushes "Xena Browser" section too far down
+                    margin-bottom: 0;
+                    margin-top: 0;
+                }
+                // Position image
+                .public-private-image-container {
+                    position: relative;
+                    img {
+                        max-width: 100%;
+                        position: absolute; // Remove from normal flow
+                        top: 18px; // Image is positioned lower than corresponding text
+                    }
+                }
             }
-            span {
-                .font(28px,700,normal);
+            .section-peach {
+                background: @xena-peach;
+                margin-top: 0; // Reset scoot up on mobile
+                padding-bottom: 122px;
+                padding-top: 107px; // Line height of h6 (18px) + padding top = 99px;
             }
-            p {
-                .font(20px,700,normal);
+            .public-private {
+                background-color: @xena-aqua;
+                position: relative;
+                &:after {
+                    background-color: @xena-green-dark;
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    right: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 61.11%; // Match back up with mocks for large devices (modified to larger width for medium devices)
+                    transform-origin: bottom left;
+                    .transform(skew(-21deg, 0deg));
+                }
+                .section {
+                    padding-bottom: 142px;
+                    padding-top: 116px; // Line height of h6 + margin top = 110px
+                    h6 {
+                        font-style: italic;
+                    }
+                    strong {
+                        display: block;
+                        .font(28px, 700);
+                        color: @xena-white;
+                        line-height: 28px;
+                        margin-top: 13px;
+                    }
+                    .button {
+                        margin-top: 50px;
+                    }
+                }
+                .section-private {
+                    .layer-above {
+                        // Layer content of private section above skewed after pseudo element of public-private
+                        position: relative;
+                        z-index: 100;
+                    }
+                }
             }
         }
-        .section-white {
-            .info {
-                display: block;
+    }
+}
+
+/**
+ * Medium only
+ */
+@media screen and (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+    // Home page
+    .page-home {
+        // Overview
+        .overview {
+            .value-prop-description {
+
             }
-        }
-        .section-red {
-            padding: 50px 0;
-        }
-        .section-green-dark {
-            background: @xena-green-dark;
-            height: 100%;
-            position: absolute;
-            right: 0;
-            width: 43%;
-            z-index: 1;
-            &:before {
-                background: @xena-green-dark;
-                position: absolute;
-                content: "";
-                left: -230px;
-                top: 0;
-                width: 500px;
-                height: 200%;
-                .transform(rotate(20deg));
+            .section-peach {
+
+            }
+            .public-private {
+                &:after {
+                    .transform(skew(-11deg, 0deg)); // Off the mocks - skew further for narrow medium devices
+                }
             }
         }
     }
@@ -214,17 +241,27 @@ a {
  * Large +
  */
 @media screen and (min-width: @screen-lg-min) {
-    .content-block {
-        .image-wrap {
-            right: -40px;
-            margin: 60px 0 0;
-            //width: 800px;
-            width: 59.4%;
-        }
+    // Override Bootstrap to snap at large screens (ie change behaviour from fluid to static)
+    .container-fluid {
+        margin-left: auto;
+        margin-right: auto;
+        width: @screen-lg-min;
     }
-    .section-green-dark {
-        &:before {
-            left: -195px;
+}
+
+/**
+ * Extra large
+ */
+@media screen and (min-width: @screen-xl-min) {
+    // Home page
+    .page-home {
+        // Overview
+        .overview {
+            .public-private {
+                &:after {
+                    width: 55%; // Off the mocks - scooting split to the right for larger devices
+                }
+            }
         }
     }
 }

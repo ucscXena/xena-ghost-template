@@ -4,20 +4,37 @@
  * Typography-related rules.
  */
 
+/**
+ * Mixins
+ */
+
+
+// Specify font size, weight and style, with style defaulting to "normal"
+.font(@font-size, @font-weight, @font-style:normal) {
+
+    font-family: "San Francisco", sans-serif;
+    font-size: @font-size;
+    font-style: @font-style;
+    font-weight: @font-weight;
+}
+
+/**
+ * Classes
+ */
+
 body {
-    color: pink;
     font-family: "San Francisco", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: inherit;
     font-family: inherit;
     //font-weight: 500; TODO revisit (as per BS spec)
     //line-height: 1.1;
-    color: inherit;
 }
 
 h6 {
-	.font(34px,700,normal);
 	color: @xena-white;
-	margin: 30px 0 20px;
+    .font(34px, 700);
+    margin: 30px 0 20px;
 }

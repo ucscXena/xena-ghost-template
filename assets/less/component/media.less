@@ -3,17 +3,30 @@
  *
  * Media query-related variables.
  *
- * Responsive breakpoints match Bootstrap's media queries (see http://getbootstrap.com/css/#grid-media-queries):
+ * Responsive breakpoints match Bootstrap's media queries for xs, sm and
+ * md (see http://getbootstrap.com/css/#grid-media-queries):
  *
  * < 768px - extra small eg mobile (default)
  * > 768px - small eg tablet
- * > 992px - medium eg desktop
- * > 1200px - large eg large devices
+ * > 992px - medium eg desktop, laptop
+ *
+ * Bootstrap's Media queries for large devices has been overridden to match design. Bootstrap's standard large device
+ * breakdpoint is 1200px. UCSC Xena's large breakpoint is 1440px.
+ *
+ * > 1440px - large eg large desktop, laptop
+ *
+ * See customized Bootstrap CSS at assets/css/vendor/boostrap.css (includes link to update customization).
  *
  * Defining breakpoints outside of these values should be done with discretion, as these breakpoints are designed to
  * work in conjunction with Bootstrap's grid functionality.
  */
 
-@screen-sm-min: 767px;
-@screen-md-min: 991px;
-@screen-lg-min: 1199px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1440px;
+@screen-xl-min: 1921px; // Custom size
+
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+

@@ -42,6 +42,28 @@
 /**
  * UCSC Xena Web
  *
+ * Button-related rules
+ */
+.button {
+  background: #ff6b6b;
+  border: none;
+  color: #ffffff;
+  font-family: "San Francisco", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  outline: none;
+  min-width: 214px;
+  padding: 13px 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-appearance: none;
+}
+/**
+ * UCSC Xena Web
+ *
  * Color variables.
  */
 /**
@@ -59,12 +81,9 @@ a:hover {
  * Home page
  */
 .page-home .jumbotron {
+  padding-top: 16px;
+  padding-bottom: 30px;
   text-align: center;
-}
-@media (min-width: 991px) {
-  .page-home .jumbotron {
-    text-align: left;
-  }
 }
 .page-home .jumbotron h1 {
   color: #4ecdc4;
@@ -73,13 +92,8 @@ a:hover {
   font-style: normal;
   font-weight: 800;
   line-height: 80px;
-  margin: 40px 0 0 0;
-}
-@media (min-width: 991px) {
-  .page-home .jumbotron h1 {
-    font-size: 155px;
-    line-height: 185px;
-  }
+  margin: 0 0 15px 0;
+  padding: 0;
 }
 .page-home .jumbotron h3 {
   color: #1a535c;
@@ -89,109 +103,70 @@ a:hover {
   font-weight: 600;
   line-height: 35px;
   margin: 0;
-  padding: 10px 10px;
+  padding: 0;
 }
-@media (min-width: 991px) {
-  .page-home .jumbotron h3 {
-    font-size: 42px;
-    line-height: 18px;
-  }
-}
-.page-home .button {
+.page-home .overview .value-prop-description {
+  color: #1a535c;
   font-family: "San Francisco", sans-serif;
-  font-size: 20px;
+  font-size: 28px;
   font-style: normal;
-  font-weight: 700;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  background: #ff6b6b;
-  border: none;
-  color: #ffffff;
-  outline: none;
-  padding: 5px 20px;
-  -webkit-appearance: none;
+  font-weight: 18px;
 }
-.page-home .content-block {
-  overflow: hidden;
-  position: relative;
-}
-.page-home .content-block .image-wrap {
-  height: auto;
-  padding: 0 15px;
-  position: absolute;
+.page-home .overview .value-prop-description img {
+  display: block;
   width: 100%;
-  z-index: 1;
 }
-.page-home .data-hub h6 {
+.page-home .overview .section {
+  color: #ffffff;
+}
+.page-home .overview .section h6 {
   font-family: "San Francisco", sans-serif;
-  font-size: 24px;
-  font-style: italic;
+  font-size: 34px;
+  font-style: normal;
   font-weight: 600;
+  line-height: 1;
   margin: 0;
 }
-.page-home .data-hub p {
+.page-home .overview .section p {
   font-family: "San Francisco", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   color: #ffffff;
   line-height: 28px;
+  margin: 27px 0 0;
 }
-.page-home .data-hub span {
-  font-family: "San Francisco", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 18px;
+.page-home .overview .section-peach {
+  background: #ff6b6b;
+  margin-top: -40%;
+  padding-top: 48%;
+  padding-bottom: 58px;
 }
-.page-home .section {
-  min-height: 150px;
-  padding: 50px 0;
-  position: relative;
+.page-home .overview .public-private .section {
+  padding-bottom: 71px;
+  padding-top: 58px;
 }
-.page-home .section-white p {
+.page-home .overview .public-private .section h6 {
+  font-style: italic;
+}
+.page-home .overview .public-private .section strong {
+  display: block;
   font-family: "San Francisco", sans-serif;
   font-size: 28px;
   font-style: normal;
-  font-weight: 400;
-  color: #1a535c;
-  margin: 0 0 30px;
-}
-.page-home .section-white .info {
-  display: none;
-}
-.page-home .section-red {
-  background: #ff6b6b;
-  padding: 100px 0 50px;
-}
-.page-home .section-red p {
-  font-family: "San Francisco", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   color: #ffffff;
-  margin: 0 0 30px;
+  line-height: 28px;
+  margin-top: 13px;
 }
-.page-home .section-green-dark {
-  background: #1a535c;
-  height: 50%;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: 1;
+.page-home .overview .public-private .section .button {
+  margin-top: 50px;
 }
-.page-home .section-aqua {
-  background: #4ecdc4;
+.page-home .overview .section-public {
+  background-color: #4ecdc4;
 }
-.page-home .section-aqua .content-left {
-  margin-bottom: 100px;
-}
-.page-home .section-aqua .content-right {
-  float: right;
-  z-index: 2;
+.page-home .overview .section-private {
+  background-color: #1a535c;
 }
 /**
  * Media Queries
@@ -199,79 +174,119 @@ a:hover {
 /**
  * Small +
  */
-@media screen and (min-width: 767px) {
-  .page-home .section-white {
-    min-height: 380px;
-  }
-}
 /**
  * Medium +
  */
-@media screen and (min-width: 991px) {
-  .page-home .content-block .image-wrap {
-    right: -40px;
-    margin: 60px 0 0;
-    width: 59.4%;
+@media screen and (min-width: 992px) {
+  .page-home .jumbotron {
+    padding-top: 37px ;
+    padding-bottom: 65px;
+    text-align: left;
   }
-  .page-home .data-hub h6 {
-    font-family: "San Francisco", sans-serif;
-    font-size: 34px;
+  .page-home .jumbotron h1 {
+    font-size: 155px;
+    line-height: 185px;
+  }
+  .page-home .jumbotron h3 {
+    font-size: 42px;
+    line-height: 18px;
+    margin-top: -12px;
+  }
+  .page-home .overview .value-prop-description {
+    margin-bottom: 76px;
+  }
+  .page-home .overview .value-prop-description p {
+    font-size: 26px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .page-home .overview .value-prop-description .public-private-image-container {
+    position: relative;
+  }
+  .page-home .overview .value-prop-description .public-private-image-container img {
+    max-width: 100%;
+    position: absolute;
+    top: 18px;
+  }
+  .page-home .overview .section-peach {
+    background: #ff6b6b;
+    margin-top: 0;
+    padding-bottom: 122px;
+    padding-top: 107px;
+  }
+  .page-home .overview .public-private {
+    background-color: #4ecdc4;
+    position: relative;
+  }
+  .page-home .overview .public-private:after {
+    background-color: #1a535c;
+    content: "";
+    display: block;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 61.11%;
+    transform-origin: bottom left;
+    -webkit-transform: skew(-21deg, 0deg);
+    -moz-transform: skew(-21deg, 0deg);
+    -ms-transform: skew(-21deg, 0deg);
+    -o-transform: skew(-21deg, 0deg);
+    transform: skew(-21deg, 0deg);
+  }
+  .page-home .overview .public-private .section {
+    padding-bottom: 142px;
+    padding-top: 116px;
+  }
+  .page-home .overview .public-private .section h6 {
     font-style: italic;
-    font-weight: 600;
-    margin: 50px 0 10px;
   }
-  .page-home .data-hub span {
+  .page-home .overview .public-private .section strong {
+    display: block;
     font-family: "San Francisco", sans-serif;
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
+    color: #ffffff;
+    line-height: 28px;
+    margin-top: 13px;
   }
-  .page-home .data-hub p {
-    font-family: "San Francisco", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
+  .page-home .overview .public-private .section .button {
+    margin-top: 50px;
   }
-  .page-home .section-white .info {
-    display: block;
+  .page-home .overview .public-private .section-private .layer-above {
+    position: relative;
+    z-index: 100;
   }
-  .page-home .section-red {
-    padding: 50px 0;
-  }
-  .page-home .section-green-dark {
-    background: #1a535c;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    width: 43%;
-    z-index: 1;
-  }
-  .page-home .section-green-dark:before {
-    background: #1a535c;
-    position: absolute;
-    content: "";
-    left: -230px;
-    top: 0;
-    width: 500px;
-    height: 200%;
-    -webkit-transform: rotate(20deg);
-    -moz-transform: rotate(20deg);
-    -ms-transform: rotate(20deg);
-    -o-transform: rotate(20deg);
-    transform: rotate(20deg);
+}
+/**
+ * Medium only
+ */
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+  .page-home .overview .public-private:after {
+    -webkit-transform: skew(-11deg, 0deg);
+    -moz-transform: skew(-11deg, 0deg);
+    -ms-transform: skew(-11deg, 0deg);
+    -o-transform: skew(-11deg, 0deg);
+    transform: skew(-11deg, 0deg);
   }
 }
 /**
  * Large +
  */
-@media screen and (min-width: 1199px) {
-  .content-block .image-wrap {
-    right: -40px;
-    margin: 60px 0 0;
-    width: 59.4%;
+@media screen and (min-width: 1440px) {
+  .container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
   }
-  .section-green-dark:before {
-    left: -195px;
+}
+/**
+ * Extra large
+ */
+@media screen and (min-width: 1921px) {
+  .page-home .overview .public-private:after {
+    width: 55%;
   }
 }
 /**
@@ -282,35 +297,42 @@ a:hover {
 @font-face {
   font-family: "San Francisco";
   font-weight: 400;
-  src: url("/assets/font/SF-UI-Text-Regular.otf");
+  src: url("/assets/font/SF-UI-Text-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "San Francisco";
   font-style: italic;
   font-weight: 600;
-  src: url("/assets/font/SF-UI-Text-SemiboldItalic.otf");
+  src: url("/assets/font/SF-UI-Text-SemiboldItalic.otf") format("opentype");
 }
 @font-face {
   font-family: "San Francisco";
   font-weight: 700;
-  src: url("/assets/font/SF-UI-Text-Bold.otf");
+  src: url("/assets/font/SF-UI-Text-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "San Francisco";
   font-weight: 800;
-  src: url("/assets/font/SF-UI-Display-Black.otf");
+  src: url("/assets/font/SF-UI-Display-Black.otf") format("opentype");
 }
 /**
  * UCSC Xena Web
  *
  * Media query-related variables.
  *
- * Responsive breakpoints match Bootstrap's media queries (see http://getbootstrap.com/css/#grid-media-queries):
+ * Responsive breakpoints match Bootstrap's media queries for xs, sm and
+ * md (see http://getbootstrap.com/css/#grid-media-queries):
  *
  * < 768px - extra small eg mobile (default)
  * > 768px - small eg tablet
- * > 992px - medium eg desktop
- * > 1200px - large eg large devices
+ * > 992px - medium eg desktop, laptop
+ *
+ * Bootstrap's Media queries for large devices has been overridden to match design. Bootstrap's standard large device
+ * breakdpoint is 1200px. UCSC Xena's large breakpoint is 1440px.
+ *
+ * > 1440px - large eg large desktop, laptop
+ *
+ * See customized Bootstrap CSS at assets/css/vendor/boostrap.css (includes link to update customization).
  *
  * Defining breakpoints outside of these values should be done with discretion, as these breakpoints are designed to
  * work in conjunction with Bootstrap's grid functionality.
@@ -349,9 +371,9 @@ a:hover {
  * Classes - media queries
  */
 /**
- * Extra small and small devices (mobile and tablet)
+ * Extra small and small devices - show hamburger
  */
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 991px) {
   .navbar .navbar-hamburger {
     float: right;
     padding: 61px 20px;
@@ -447,9 +469,9 @@ a:hover {
   }
 }
 /**
- * Medium and large devices (desktop up)
+ * Medium and large devices (desktop up) - hide hamburger, show straight-up menu
  */
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 992px) {
   .navbar .navbar-hamburger {
     display: none;
   }
@@ -471,12 +493,25 @@ a:hover {
   }
 }
 /**
+ * Medium and large devices (desktop up) - hide hamburger, show straight-up menu
+ */
+@media screen and (min-width: 1440px) {
+  .navbar .navbar-nav li {
+    margin-left: 75px;
+  }
+}
+/**
  * UCSC Xena Web
  *
  * Typography-related rules.
  */
+/**
+ * Mixins
+ */
+/**
+ * Classes
+ */
 body {
-  color: pink;
   font-family: "San Francisco", sans-serif;
 }
 h1,
@@ -485,14 +520,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: inherit;
   color: inherit;
+  font-family: inherit;
 }
 h6 {
+  color: #ffffff;
   font-family: "San Francisco", sans-serif;
   font-size: 34px;
   font-style: normal;
   font-weight: 700;
-  color: #ffffff;
   margin: 30px 0 20px;
 }
