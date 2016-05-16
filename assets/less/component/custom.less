@@ -124,6 +124,12 @@ a {
  */
 @media screen and (min-width: @screen-md-min) {
 
+    // Hide public/private image overhang on right hand side and skewed background in home page public/private
+    // section. (See also http://stackoverflow.com/a/18411774)
+    html, body {
+        overflow-x: hidden;
+    }
+
     // Home page
     .page-home {
         // Jumbotron
@@ -259,7 +265,7 @@ a {
         .overview {
             .public-private {
                 &:after {
-                    width: 55%; // Off the mocks - scooting split to the right for larger devices
+                    width: 56.5%; // Off the mocks - scooting split to the right for larger devices
                 }
             }
         }
