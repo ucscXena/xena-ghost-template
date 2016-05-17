@@ -29,8 +29,8 @@ a {
     .section {
         padding-bottom: 71px; // Off the mocks - generalizing for reuse by all sections
         padding-top: 71px; // Off the mocks - generalizing for reuse by all sections
-        // Set up standard for h5 "subtitle" inside sections
-        h5 {
+        // Set up standard for h6 "subtitle" inside sections
+        h6 {
             &.subtitle {
                 font-style: italic;
                 margin-bottom: 60px;
@@ -79,10 +79,10 @@ a {
         }
         .public-private {
             .section {
-                h4 {
+                h5 {
                     font-style: italic;
                 }
-                h5 {
+                h6 {
                     margin-top: 13px;
                 }
                 .button {
@@ -121,6 +121,9 @@ a {
     .discover {
         .row {
             margin-bottom: 52px;
+            &:first-child, &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -217,15 +220,9 @@ a {
                     .transform(skew(-21deg, 0deg));
                 }
                 .section {
+                    // Customize section padding for public-private section
                     padding-bottom: 142px;
                     padding-top: 116px; // Line height of h6 + margin top = 110px
-                    strong {
-                        display: block;
-                        .font(28px, 700);
-                        color: @xena-white;
-                        line-height: 28px;
-                        margin-top: 13px;
-                    }
                     .button {
                         margin-top: 50px;
                     }

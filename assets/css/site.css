@@ -84,7 +84,7 @@ a:hover {
   padding-bottom: 71px;
   padding-top: 71px;
 }
-.page-home .section h5.subtitle {
+.page-home .section h6.subtitle {
   font-style: italic;
   margin-bottom: 60px;
 }
@@ -134,10 +134,10 @@ a:hover {
   padding-top: 48%;
   padding-bottom: 58px;
 }
-.page-home .overview .public-private .section h4 {
+.page-home .overview .public-private .section h5 {
   font-style: italic;
 }
-.page-home .overview .public-private .section h5 {
+.page-home .overview .public-private .section h6 {
   margin-top: 13px;
 }
 .page-home .overview .public-private .section .button {
@@ -169,6 +169,10 @@ a:hover {
 }
 .page-home .discover .row {
   margin-bottom: 52px;
+}
+.page-home .discover .row:first-child,
+.page-home .discover .row:last-child {
+  margin-bottom: 0;
 }
 /**
  * Media Queries
@@ -250,16 +254,6 @@ a:hover {
   .page-home .overview .public-private .section {
     padding-bottom: 142px;
     padding-top: 116px;
-  }
-  .page-home .overview .public-private .section strong {
-    display: block;
-    font-family: "San Francisco", sans-serif;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 28px;
-    margin-top: 13px;
   }
   .page-home .overview .public-private .section .button {
     margin-top: 50px;
@@ -540,15 +534,9 @@ h6 {
   margin: 0;
   padding: 0;
 }
-h4 {
-  font-family: "San Francisco", sans-serif;
-  font-size: 34px;
-  font-style: normal;
-  font-weight: 600;
-}
 h5 {
   font-family: "San Francisco", sans-serif;
-  font-size: 28px;
+  font-size: 34px;
   font-style: normal;
   font-weight: 600;
 }
