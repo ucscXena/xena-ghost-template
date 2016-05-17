@@ -107,7 +107,6 @@ a {
             background-color: @xena-green-dark;
         }
     }
-
     //Discover
     .discover {
         .section {
@@ -138,6 +137,36 @@ a {
             float: left;
         }
     }
+    // Analyze
+    .analyze {
+        .section-peach {
+            background: @xena-peach;
+            color: @xena-white;
+            padding-bottom: 122px;
+            padding-top: 107px;
+            h6 {
+                .font(34px, 700);
+                line-height: 1.4em;
+            }
+            p {
+                .font(28px, 700, italic);
+                line-height: 1.6em;
+            }
+            figure {
+                text-align: center;
+                img {
+                    margin: 0 auto;
+                    max-width: 229px;
+                    width: 100%;
+                }
+                figcaption {
+                    .font(20px, 700);
+                    line-height: 1.6em;
+                    margin: 25px 0 0;
+                }
+            }
+        }
+    }
 }
 
 /**
@@ -148,6 +177,15 @@ a {
  * Small +
  */
 @media screen and (min-width: @screen-sm-min) {
+    .analyze {
+        .section-peach {
+            .analyze-image {
+                img {
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
 
 /**
@@ -252,6 +290,13 @@ a {
             .section {
                 .button {
                     float: right;
+                }
+            }
+        }
+        .analyze {
+            .section-peach {
+                .analyze-image + p {
+                    text-align: left;
                 }
             }
         }

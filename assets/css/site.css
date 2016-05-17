@@ -205,12 +205,53 @@ a:hover {
 .page-home .discover .button {
   float: left;
 }
+.page-home .analyze .section-peach {
+  background: #ff6b6b;
+  color: #ffffff;
+  padding-bottom: 122px;
+  padding-top: 107px;
+}
+.page-home .analyze .section-peach h6 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.4em;
+}
+.page-home .analyze .section-peach p {
+  font-family: "San Francisco", sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.6em;
+}
+.page-home .analyze .section-peach figure {
+  text-align: center;
+}
+.page-home .analyze .section-peach figure img {
+  margin: 0 auto;
+  max-width: 229px;
+  width: 100%;
+}
+.page-home .analyze .section-peach figure figcaption {
+  font-family: "San Francisco", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  margin: 25px 0 0;
+}
 /**
  * Media Queries
  */
 /**
  * Small +
  */
+@media screen and (min-width: 768px) {
+  .analyze .section-peach .analyze-image img {
+    margin: 0;
+  }
+}
 /**
  * Medium +
  */
@@ -301,6 +342,9 @@ a:hover {
   }
   .page-home .discover .section .button {
     float: right;
+  }
+  .page-home .analyze .section-peach .analyze-image + p {
+    text-align: left;
   }
 }
 /**
