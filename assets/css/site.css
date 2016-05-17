@@ -168,16 +168,98 @@ a:hover {
 .page-home .overview .section-private {
   background-color: #1a535c;
 }
+.page-home .discover .section {
+  color: #1a535c;
+  font-family: "San Francisco", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  padding-top: 58px;
+}
+.page-home .discover .section .section-subtitle {
+  display: block;
+  font-family: "San Francisco", sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 1px;
+}
+.page-home .discover .section strong {
+  font-family: "San Francisco", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+.page-home .discover .section h6 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  color: #1a535c;
+  line-height: 1;
+  margin: 0;
+}
+.page-home .discover .button {
+  float: left;
+}
+.page-home .analyze .section-peach {
+  background: #ff6b6b;
+  color: #ffffff;
+  padding-bottom: 122px;
+  padding-top: 107px;
+}
+.page-home .analyze .section-peach h6 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.4em;
+}
+.page-home .analyze .section-peach p {
+  font-family: "San Francisco", sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.6em;
+}
+.page-home .analyze .section-peach figure {
+  text-align: center;
+}
+.page-home .analyze .section-peach figure img {
+  margin: 0 auto;
+  max-width: 229px;
+  width: 100%;
+}
+.page-home .analyze .section-peach figure figcaption {
+  font-family: "San Francisco", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.6em;
+  margin: 25px 0 0;
+}
 /**
  * Media Queries
  */
 /**
  * Small +
  */
+@media screen and (min-width: 768px) {
+  .analyze .section-peach .analyze-image img {
+    margin: 0;
+  }
+}
 /**
  * Medium +
  */
 @media screen and (min-width: 992px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .page-home .jumbotron {
     padding-top: 37px ;
     padding-bottom: 65px;
@@ -258,6 +340,12 @@ a:hover {
     position: relative;
     z-index: 100;
   }
+  .page-home .discover .section .button {
+    float: right;
+  }
+  .page-home .analyze .section-peach .analyze-image + p {
+    text-align: left;
+  }
 }
 /**
  * Medium only
@@ -286,7 +374,7 @@ a:hover {
  */
 @media screen and (min-width: 1921px) {
   .page-home .overview .public-private:after {
-    width: 55%;
+    width: 56.5%;
   }
 }
 /**

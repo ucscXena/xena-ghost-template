@@ -107,6 +107,66 @@ a {
             background-color: @xena-green-dark;
         }
     }
+    //Discover
+    .discover {
+        .section {
+            color: @xena-green-dark;
+            .font(18px, 400);
+            line-height: 21px;
+            padding-top: 58px;
+            .section-subtitle {
+                display: block;
+                .font(28px, 600, italic);
+                line-height: 1;
+                // Line height + margin top = 10px
+                margin-top: 1px;
+
+            }
+            strong {
+                .font(28px, 700);
+                line-height: 28px;
+            }
+            h6 {
+                .font(34px, 700);
+                color: @xena-green-dark;
+                line-height: 1;
+                margin: 0;
+            }
+        }
+        .button {
+            float: left;
+        }
+    }
+    // Analyze
+    .analyze {
+        .section-peach {
+            background: @xena-peach;
+            color: @xena-white;
+            padding-bottom: 122px;
+            padding-top: 107px;
+            h6 {
+                .font(34px, 700);
+                line-height: 1.4em;
+            }
+            p {
+                .font(28px, 700, italic);
+                line-height: 1.6em;
+            }
+            figure {
+                text-align: center;
+                img {
+                    margin: 0 auto;
+                    max-width: 229px;
+                    width: 100%;
+                }
+                figcaption {
+                    .font(20px, 700);
+                    line-height: 1.6em;
+                    margin: 25px 0 0;
+                }
+            }
+        }
+    }
 }
 
 /**
@@ -117,12 +177,27 @@ a {
  * Small +
  */
 @media screen and (min-width: @screen-sm-min) {
+    .analyze {
+        .section-peach {
+            .analyze-image {
+                img {
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
 
 /**
  * Medium +
  */
 @media screen and (min-width: @screen-md-min) {
+
+    // Hide public/private image overhang on right hand side and skewed background in home page public/private
+    // section. (See also http://stackoverflow.com/a/18411774)
+    html, body {
+        overflow-x: hidden;
+    }
 
     // Home page
     .page-home {
@@ -210,6 +285,21 @@ a {
                 }
             }
         }
+        // Discover section
+        .discover {
+            .section {
+                .button {
+                    float: right;
+                }
+            }
+        }
+        .analyze {
+            .section-peach {
+                .analyze-image + p {
+                    text-align: left;
+                }
+            }
+        }
     }
 }
 
@@ -222,12 +312,6 @@ a {
     .page-home {
         // Overview
         .overview {
-            .value-prop-description {
-
-            }
-            .section-peach {
-
-            }
             .public-private {
                 &:after {
                     .transform(skew(-11deg, 0deg)); // Off the mocks - skew further for narrow medium devices
@@ -259,7 +343,7 @@ a {
         .overview {
             .public-private {
                 &:after {
-                    width: 55%; // Off the mocks - scooting split to the right for larger devices
+                    width: 56.5%; // Off the mocks - scooting split to the right for larger devices
                 }
             }
         }
