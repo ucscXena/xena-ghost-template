@@ -80,6 +80,14 @@ a:hover {
 /**
  * Home page
  */
+.page-home .section {
+  padding-bottom: 71px;
+  padding-top: 71px;
+}
+.page-home .section h5.subtitle {
+  font-style: italic;
+  margin-bottom: 60px;
+}
 .page-home .jumbotron {
   padding-top: 16px;
   padding-bottom: 30px;
@@ -92,21 +100,15 @@ a:hover {
   font-style: normal;
   font-weight: 800;
   line-height: 80px;
-  margin: 0 0 15px 0;
-  padding: 0;
+  margin-bottom: 15px;
 }
 .page-home .jumbotron h3 {
-  color: #1a535c;
   font-family: "San Francisco", sans-serif;
   font-size: 24px;
   font-style: italic;
   font-weight: 600;
-  line-height: 35px;
-  margin: 0;
-  padding: 0;
 }
 .page-home .overview .value-prop-description {
-  color: #1a535c;
   font-family: "San Francisco", sans-serif;
   font-size: 28px;
   font-style: normal;
@@ -119,21 +121,11 @@ a:hover {
 .page-home .overview .section {
   color: #ffffff;
 }
-.page-home .overview .section h6 {
-  font-family: "San Francisco", sans-serif;
-  font-size: 34px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1;
-  margin: 0;
-}
 .page-home .overview .section p {
   font-family: "San Francisco", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  color: #ffffff;
-  line-height: 28px;
   margin: 27px 0 0;
 }
 .page-home .overview .section-peach {
@@ -142,21 +134,10 @@ a:hover {
   padding-top: 48%;
   padding-bottom: 58px;
 }
-.page-home .overview .public-private .section {
-  padding-bottom: 71px;
-  padding-top: 58px;
-}
-.page-home .overview .public-private .section h6 {
+.page-home .overview .public-private .section h4 {
   font-style: italic;
 }
-.page-home .overview .public-private .section strong {
-  display: block;
-  font-family: "San Francisco", sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 28px;
+.page-home .overview .public-private .section h5 {
   margin-top: 13px;
 }
 .page-home .overview .public-private .section .button {
@@ -168,69 +149,15 @@ a:hover {
 .page-home .overview .section-private {
   background-color: #1a535c;
 }
-.page-home .discover .section {
-  color: #1a535c;
-  font-family: "San Francisco", sans-serif;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-  padding-top: 58px;
-}
-.page-home .discover .section .section-subtitle {
-  display: block;
-  font-family: "San Francisco", sans-serif;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 600;
-  line-height: 1;
-  margin-top: 1px;
-}
-.page-home .discover .section strong {
-  font-family: "San Francisco", sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px;
-}
-.page-home .discover .section h6 {
-  font-family: "San Francisco", sans-serif;
-  font-size: 34px;
-  font-style: normal;
-  font-weight: 700;
-  color: #1a535c;
-  line-height: 1;
-  margin: 0;
-}
-.page-home .discover .button {
-  float: left;
-}
 .page-home .analyze .section-peach {
   background: #ff6b6b;
   color: #ffffff;
-  padding-bottom: 122px;
-  padding-top: 107px;
-}
-.page-home .analyze .section-peach h6 {
-  font-family: "San Francisco", sans-serif;
-  font-size: 34px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.4em;
-}
-.page-home .analyze .section-peach p {
-  font-family: "San Francisco", sans-serif;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 700;
-  line-height: 1.6em;
 }
 .page-home .analyze .section-peach figure {
   text-align: center;
 }
 .page-home .analyze .section-peach figure img {
   margin: 0 auto;
-  max-width: 229px;
   width: 100%;
 }
 .page-home .analyze .section-peach figure figcaption {
@@ -238,8 +165,10 @@ a:hover {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.6em;
   margin: 25px 0 0;
+}
+.page-home .discover .row {
+  margin-bottom: 52px;
 }
 /**
  * Media Queries
@@ -247,11 +176,6 @@ a:hover {
 /**
  * Small +
  */
-@media screen and (min-width: 768px) {
-  .analyze .section-peach .analyze-image img {
-    margin: 0;
-  }
-}
 /**
  * Medium +
  */
@@ -259,6 +183,10 @@ a:hover {
   html,
   body {
     overflow-x: hidden;
+  }
+  .page-home .section {
+    padding-bottom: 125px;
+    padding-top: 125px;
   }
   .page-home .jumbotron {
     padding-top: 37px ;
@@ -296,6 +224,9 @@ a:hover {
     padding-bottom: 122px;
     padding-top: 107px;
   }
+  .page-home .overview .section-peach figure img {
+    max-width: 229px;
+  }
   .page-home .overview .public-private {
     background-color: #4ecdc4;
     position: relative;
@@ -320,9 +251,6 @@ a:hover {
     padding-bottom: 142px;
     padding-top: 116px;
   }
-  .page-home .overview .public-private .section h6 {
-    font-style: italic;
-  }
   .page-home .overview .public-private .section strong {
     display: block;
     font-family: "San Francisco", sans-serif;
@@ -340,11 +268,8 @@ a:hover {
     position: relative;
     z-index: 100;
   }
-  .page-home .discover .section .button {
+  .page-home .discover .button {
     float: right;
-  }
-  .page-home .analyze .section-peach .analyze-image + p {
-    text-align: left;
   }
 }
 /**
@@ -600,6 +525,7 @@ a:hover {
  * Classes
  */
 body {
+  color: #1a535c;
   font-family: "San Francisco", sans-serif;
 }
 h1,
@@ -610,12 +536,32 @@ h5,
 h6 {
   color: inherit;
   font-family: inherit;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
 }
-h6 {
-  color: #ffffff;
+h4 {
   font-family: "San Francisco", sans-serif;
   font-size: 34px;
   font-style: normal;
-  font-weight: 700;
-  margin: 30px 0 20px;
+  font-weight: 600;
+}
+h5 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+}
+h6 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+}
+p {
+  font-size: 18px;
+  line-height: 1.6em;
+}
+.italic {
+  font-style: italic;
 }

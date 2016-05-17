@@ -25,6 +25,18 @@ a {
  * Home page
  */
 .page-home {
+    // Shared..
+    .section {
+        padding-bottom: 71px; // Off the mocks - generalizing for reuse by all sections
+        padding-top: 71px; // Off the mocks - generalizing for reuse by all sections
+        // Set up standard for h5 "subtitle" inside sections
+        h5 {
+            &.subtitle {
+                font-style: italic;
+                margin-bottom: 60px;
+            }
+        }
+    }
     // Jumbotron
     .jumbotron {
         // Padding of jumbotron calculated as:
@@ -37,22 +49,15 @@ a {
             color: @xena-aqua;
             .font(100px, 800);
             line-height: 80px;
-            margin: 0 0 15px 0; // Line height of h1 and h3 + margin = 25px
-            padding: 0;
+            margin-bottom: 15px; // Line height of h1 and h3 + margin = 25px
         }
         h3 {
-            color: @xena-green-dark;
             .font(24px, 600, italic);
-            line-height: 35px;
-            margin: 0;
-            padding: 0;
         }
     }
-
     // Overview
     .overview {
         .value-prop-description {
-            color: @xena-green-dark;
             .font(28px, 18px);
             img {
                 display: block;
@@ -61,15 +66,8 @@ a {
         }
         .section {
             color: @xena-white;
-            h6 {
-                .font(34px, 600);
-                line-height: 1; // Spec'ed at 18px, changing to 1 to handle wrapped text on mobile
-                margin: 0;
-            }
             p {
                 .font(20px, 700);
-                color: @xena-white;
-                line-height: 28px;
                 margin: 27px 0 0; // Line height + margin = 30px
             }
         }
@@ -81,16 +79,10 @@ a {
         }
         .public-private {
             .section {
-                padding-bottom: 71px; // No mocks - squashing for mobile
-                padding-top: 58px; // Line height of h6 + padding top = 110px, no mocks - squashing for mobile
-                h6 {
+                h4 {
                     font-style: italic;
                 }
-                strong {
-                    display: block;
-                    .font(28px, 700);
-                    color: @xena-white;
-                    line-height: 28px;
+                h5 {
                     margin-top: 13px;
                 }
                 .button {
@@ -107,64 +99,28 @@ a {
             background-color: @xena-green-dark;
         }
     }
-    //Discover
-    .discover {
-        .section {
-            color: @xena-green-dark;
-            .font(18px, 400);
-            line-height: 21px;
-            padding-top: 58px;
-            .section-subtitle {
-                display: block;
-                .font(28px, 600, italic);
-                line-height: 1;
-                // Line height + margin top = 10px
-                margin-top: 1px;
-
-            }
-            strong {
-                .font(28px, 700);
-                line-height: 28px;
-            }
-            h6 {
-                .font(34px, 700);
-                color: @xena-green-dark;
-                line-height: 1;
-                margin: 0;
-            }
-        }
-        .button {
-            float: left;
-        }
-    }
     // Analyze
     .analyze {
         .section-peach {
             background: @xena-peach;
             color: @xena-white;
-            padding-bottom: 122px;
-            padding-top: 107px;
-            h6 {
-                .font(34px, 700);
-                line-height: 1.4em;
-            }
-            p {
-                .font(28px, 700, italic);
-                line-height: 1.6em;
-            }
             figure {
                 text-align: center;
                 img {
                     margin: 0 auto;
-                    max-width: 229px;
                     width: 100%;
                 }
                 figcaption {
                     .font(20px, 700);
-                    line-height: 1.6em;
                     margin: 25px 0 0;
                 }
             }
+        }
+    }
+    // Discover section
+    .discover {
+        .row {
+            margin-bottom: 52px;
         }
     }
 }
@@ -177,15 +133,6 @@ a {
  * Small +
  */
 @media screen and (min-width: @screen-sm-min) {
-    .analyze {
-        .section-peach {
-            .analyze-image {
-                img {
-                    margin: 0;
-                }
-            }
-        }
-    }
 }
 
 /**
@@ -201,6 +148,11 @@ a {
 
     // Home page
     .page-home {
+        // Shared...
+        .section {
+            padding-bottom: 125px; // Off the mocks - generalizing for reuse by all sections
+            padding-top: 125px; // Off the mocks - generalizing for reuse by all sections
+        }
         // Jumbotron
         .jumbotron {
             // Padding of jumbotron calculated as:
@@ -243,6 +195,11 @@ a {
                 margin-top: 0; // Reset scoot up on mobile
                 padding-bottom: 122px;
                 padding-top: 107px; // Line height of h6 (18px) + padding top = 99px;
+                figure {
+                    img {
+                        max-width: 229px;
+                    }
+                }
             }
             .public-private {
                 background-color: @xena-aqua;
@@ -262,9 +219,6 @@ a {
                 .section {
                     padding-bottom: 142px;
                     padding-top: 116px; // Line height of h6 + margin top = 110px
-                    h6 {
-                        font-style: italic;
-                    }
                     strong {
                         display: block;
                         .font(28px, 700);
@@ -285,19 +239,10 @@ a {
                 }
             }
         }
-        // Discover section
+        // Discover
         .discover {
-            .section {
-                .button {
-                    float: right;
-                }
-            }
-        }
-        .analyze {
-            .section-peach {
-                .analyze-image + p {
-                    text-align: left;
-                }
+            .button {
+                float: right;
             }
         }
     }

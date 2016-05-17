@@ -23,18 +23,41 @@
  */
 
 body {
+    color: @xena-green-dark;
     font-family: "San Francisco", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: inherit;
     font-family: inherit;
-    //font-weight: 500; TODO revisit (as per BS spec)
-    //line-height: 1.1;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    .font(34px, 600);
+}
+
+h5 {
+    .font(28px, 600);
 }
 
 h6 {
-	color: @xena-white;
-    .font(34px, 700);
-    margin: 30px 0 20px;
+    .font(28px, 600);
 }
+
+p {
+    font-size: 18px;
+    line-height: 1.6em;
+}
+
+.italic {
+    font-style: italic;
+}
+
+//h6 {
+//	color: @xena-white;
+//    .font(34px, 700);
+//    margin: 30px 0 20px;
+//}
