@@ -168,6 +168,43 @@ a:hover {
 .page-home .overview .section-private {
   background-color: #1a535c;
 }
+.page-home .discover .section {
+  color: #1a535c;
+  font-family: "San Francisco", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  padding-top: 58px;
+}
+.page-home .discover .section .section-subtitle {
+  display: block;
+  font-family: "San Francisco", sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 1px;
+}
+.page-home .discover .section strong {
+  font-family: "San Francisco", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+.page-home .discover .section h6 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  color: #1a535c;
+  line-height: 1;
+  margin: 0;
+}
+.page-home .discover .button {
+  float: left;
+}
 /**
  * Media Queries
  */
@@ -261,6 +298,9 @@ a:hover {
   .page-home .overview .public-private .section-private .layer-above {
     position: relative;
     z-index: 100;
+  }
+  .page-home .discover .section .button {
+    float: right;
   }
 }
 /**

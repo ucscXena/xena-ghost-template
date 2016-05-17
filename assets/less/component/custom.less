@@ -107,6 +107,37 @@ a {
             background-color: @xena-green-dark;
         }
     }
+
+    //Discover
+    .discover {
+        .section {
+            color: @xena-green-dark;
+            .font(18px, 400);
+            line-height: 21px;
+            padding-top: 58px;
+            .section-subtitle {
+                display: block;
+                .font(28px, 600, italic);
+                line-height: 1;
+                // Line height + margin top = 10px
+                margin-top: 1px;
+
+            }
+            strong {
+                .font(28px, 700);
+                line-height: 28px;
+            }
+            h6 {
+                .font(34px, 700);
+                color: @xena-green-dark;
+                line-height: 1;
+                margin: 0;
+            }
+        }
+        .button {
+            float: left;
+        }
+    }
 }
 
 /**
@@ -216,6 +247,14 @@ a {
                 }
             }
         }
+        // Discover section
+        .discover {
+            .section {
+                .button {
+                    float: right;
+                }
+            }
+        }
     }
 }
 
@@ -228,12 +267,6 @@ a {
     .page-home {
         // Overview
         .overview {
-            .value-prop-description {
-
-            }
-            .section-peach {
-
-            }
             .public-private {
                 &:after {
                     .transform(skew(-11deg, 0deg)); // Off the mocks - skew further for narrow medium devices
