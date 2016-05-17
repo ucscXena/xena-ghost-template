@@ -35,6 +35,22 @@ module.exports = function (grunt) {
             }
         },
 
+        // Clean Config
+        clean: {
+            dist: {
+                files: [
+                    {
+                        dot: true,
+                        src: [
+                            ".tmp",
+                            "dist/*",
+                            "!dist/.git*"
+                        ]
+                    }
+                ]
+            }
+        },
+
         /**
          * Less config
          */
@@ -47,6 +63,52 @@ module.exports = function (grunt) {
                     "assets/css/site.css": "assets/less/site.less"
                 }
             }
+        },
+        copy: {
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: "assets",
+                        dest: "dist/assets/",
+                        src: "**/*.*"
+                    },
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: "partials",
+                        dest: "dist/partials/",
+                        src: "**/*.*"
+                    },
+                    {
+                        expand: true,
+                        dot: true,
+                        dest: "dist/",
+                        src: "*.hbs"
+                    },
+                    {
+                        expand: true,
+                        dot: true,
+                        dest: "dist/",
+                        src: "package.json"
+                    },
+
+                ]
+            },
+        },
+        compress: {
+            dist: {
+                options: {
+                    archive: './xena-ghost-theme.zip',
+                    mode: 'zip'
+                },
+                files: [
+                    { src: './dist/**',
+                      dest: '/'
+                    }
+                ]
+            }
         }
     });
 
@@ -56,5 +118,14 @@ module.exports = function (grunt) {
     grunt.registerTask("pizza", "Compile less files, start watcher", [
         "less:dev",
         "watch"
+    ]);
+
+    /**
+     * Dev build task - compile less files, start watcher
+     */
+    grunt.registerTask("dist", "Create zip file", [
+        "clean",
+        "copy",
+        "compress:dist"
     ]);
 };

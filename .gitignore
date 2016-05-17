@@ -31,3 +31,10 @@ node_modules
 
 # IDE files
 .idea
+
+# Dist directory to make the zip file for the theme
+dist
+
+#zip
+*.zip
+
