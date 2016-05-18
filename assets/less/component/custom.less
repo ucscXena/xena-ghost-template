@@ -37,6 +37,21 @@ a {
             }
         }
     }
+    figure {
+        margin-bottom: 85px;
+        text-align: center;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        img {
+            margin: 0 auto;
+            width: 100%;
+        }
+        figcaption {
+            .font(20px, 700);
+            margin: 25px 0 0;
+        }
+    }
     // Jumbotron
     .jumbotron {
         // Padding of jumbotron calculated as:
@@ -99,30 +114,38 @@ a {
             background-color: @xena-green-dark;
         }
     }
-    // Analyze
-    .analyze {
-        .section-peach {
-            background: @xena-peach;
-            color: @xena-white;
-            figure {
-                text-align: center;
-                img {
-                    margin: 0 auto;
-                    width: 100%;
-                }
-                figcaption {
-                    .font(20px, 700);
-                    margin: 25px 0 0;
-                }
-            }
-        }
-    }
     // Discover section
     .discover {
         .row {
             margin-bottom: 52px;
             &:first-child, &:last-child {
                 margin-bottom: 0;
+            }
+        }
+    }
+    // Analyze
+    .analyze {
+        .section-peach {
+            background: @xena-peach;
+            color: @xena-white;
+        }
+    }
+    // Graph
+    .graph {
+        .section-yellow {
+            background: @xena-yellow;
+            color: @xena-green-dark;
+            button {
+                display: none;
+                left: 20%;
+                position: absolute;
+                top: 30%;
+            }
+            figure {
+                img {
+                    .rounded(50%);
+                    background: @xena-yellow-light;
+                }
             }
         }
     }
@@ -198,11 +221,6 @@ a {
                 margin-top: 0; // Reset scoot up on mobile
                 padding-bottom: 122px;
                 padding-top: 107px; // Line height of h6 (18px) + padding top = 99px;
-                figure {
-                    img {
-                        max-width: 229px;
-                    }
-                }
             }
             .public-private {
                 background-color: @xena-aqua;
@@ -240,6 +258,13 @@ a {
         .discover {
             .button {
                 float: right;
+            }
+        }
+        // Shared analyze and graph
+        figure {
+            margin-bottom: 0;
+            img {
+                max-width: 229px;
             }
         }
     }

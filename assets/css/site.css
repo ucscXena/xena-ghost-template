@@ -88,6 +88,24 @@ a:hover {
   font-style: italic;
   margin-bottom: 60px;
 }
+.page-home figure {
+  margin-bottom: 85px;
+  text-align: center;
+}
+.page-home figure:last-child {
+  margin-bottom: 0;
+}
+.page-home figure img {
+  margin: 0 auto;
+  width: 100%;
+}
+.page-home figure figcaption {
+  font-family: "San Francisco", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 25px 0 0;
+}
 .page-home .jumbotron {
   padding-top: 16px;
   padding-bottom: 30px;
@@ -149,30 +167,33 @@ a:hover {
 .page-home .overview .section-private {
   background-color: #1a535c;
 }
-.page-home .analyze .section-peach {
-  background: #ff6b6b;
-  color: #ffffff;
-}
-.page-home .analyze .section-peach figure {
-  text-align: center;
-}
-.page-home .analyze .section-peach figure img {
-  margin: 0 auto;
-  width: 100%;
-}
-.page-home .analyze .section-peach figure figcaption {
-  font-family: "San Francisco", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  margin: 25px 0 0;
-}
 .page-home .discover .row {
   margin-bottom: 52px;
 }
 .page-home .discover .row:first-child,
 .page-home .discover .row:last-child {
   margin-bottom: 0;
+}
+.page-home .analyze .section-peach {
+  background: #ff6b6b;
+  color: #ffffff;
+}
+.page-home .graph .section-yellow {
+  background: #ffe66d;
+  color: #1a535c;
+}
+.page-home .graph .section-yellow button {
+  display: none;
+  left: 20%;
+  position: absolute;
+  top: 30%;
+}
+.page-home .graph .section-yellow figure img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffed99;
 }
 /**
  * Media Queries
@@ -228,9 +249,6 @@ a:hover {
     padding-bottom: 122px;
     padding-top: 107px;
   }
-  .page-home .overview .section-peach figure img {
-    max-width: 229px;
-  }
   .page-home .overview .public-private {
     background-color: #4ecdc4;
     position: relative;
@@ -264,6 +282,12 @@ a:hover {
   }
   .page-home .discover .button {
     float: right;
+  }
+  .page-home figure {
+    margin-bottom: 0;
+  }
+  .page-home figure img {
+    max-width: 229px;
   }
 }
 /**
