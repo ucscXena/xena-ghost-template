@@ -22,21 +22,24 @@ a {
 }
 
 /**
+ * Global styles
+ */
+.section {
+    padding-bottom: 71px; // Off the mocks - generalizing for reuse by all sections
+    padding-top: 71px; // Off the mocks - generalizing for reuse by all sections
+    // Set up standard for h6 "subtitle" inside sections
+    h6 {
+        &.subtitle {
+            font-style: italic;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+/**
  * Home page
  */
 .page-home {
-    // Shared..
-    .section {
-        padding-bottom: 71px; // Off the mocks - generalizing for reuse by all sections
-        padding-top: 71px; // Off the mocks - generalizing for reuse by all sections
-        // Set up standard for h6 "subtitle" inside sections
-        h6 {
-            &.subtitle {
-                font-style: italic;
-                margin-bottom: 60px;
-            }
-        }
-    }
     figure {
         margin-bottom: 85px;
         text-align: center;
@@ -147,6 +150,18 @@ a {
                     background: @xena-yellow-light;
                 }
             }
+        }
+    }
+}
+
+/**
+ * Footer
+ */
+.footer {
+    .section-green-light {
+        background: @xena-green-light;
+        p {
+            .font(14px, 700);
         }
     }
 }

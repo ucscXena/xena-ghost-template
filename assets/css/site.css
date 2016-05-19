@@ -78,16 +78,19 @@ a:hover {
  * Mixins
  */
 /**
- * Home page
+ * Global styles
  */
-.page-home .section {
+.section {
   padding-bottom: 71px;
   padding-top: 71px;
 }
-.page-home .section h6.subtitle {
+.section h6.subtitle {
   font-style: italic;
   margin-bottom: 60px;
 }
+/**
+ * Home page
+ */
 .page-home figure {
   margin-bottom: 85px;
   text-align: center;
@@ -194,6 +197,18 @@ a:hover {
   -o-border-radius: 50%;
   border-radius: 50%;
   background: #ffed99;
+}
+/**
+ * Footer
+ */
+.footer .section-green-light {
+  background: #f7fff7;
+}
+.footer .section-green-light p {
+  font-family: "San Francisco", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
 }
 /**
  * Media Queries
