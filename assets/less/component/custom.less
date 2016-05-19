@@ -11,6 +11,10 @@ a {
     }
 }
 
+hr {
+    border-top: 4px solid @xena-grey;
+}
+
 /**
  * Mixins
  */
@@ -19,6 +23,12 @@ a {
     -moz-border-radius: @radius;
     -o-border-radius: @radius;
     border-radius: @radius;
+}
+
+.social-icon-position(@backgroundHorizonal, @backgroundVertical, @width, @height){
+    background-position: @backgroundHorizonal @backgroundVertical;
+    height: @height;
+    width: @width;
 }
 
 /**
@@ -152,6 +162,40 @@ a {
             }
         }
     }
+    // Contacts
+    .contact-links {
+        .contact-list {
+            list-style: none;
+            margin: 40px auto;
+            padding: 0;
+            li {
+                display: block;
+                text-align: left;
+                a {
+                    color: @xena-grey-light;
+                    .font(14px, 700);
+                    display: block;
+                    padding: 15px 0;
+                    vertical-align: middle;
+                    .icon {
+                        background: url("/assets/image/social-sprite.png") no-repeat;
+                        display: inline-block;
+                        margin-right: 22px;
+                        vertical-align: middle;
+                    }
+                    .icon-twitter {
+                        .social-icon-position(-58px, -3px, 25px, 21px);
+                    }
+                    .icon-mail {
+                        .social-icon-position(-31px, -3px, 25px, 20px);
+                    }
+                    .icon-github {
+                        .social-icon-position(-3px, -3px, 25px, 24px);
+                    }
+                }
+            }
+        }
+    }
 }
 
 /**
@@ -173,7 +217,7 @@ a {
 /**
  * Small +
  */
-@media screen and (min-width: @screen-sm-min) {
+@media screen and (min-width: @screen-sm-min) {   
 }
 
 /**
@@ -282,6 +326,23 @@ a {
                 max-width: 229px;
             }
         }
+        // Contacts
+        .contact-links {
+            .contact-list {
+                margin: 40px 0;
+                li {
+                    display: inline-block;
+                    margin: 0;
+                    text-align: center;
+                    width: 33%;
+                    a {
+                        .icon {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -313,6 +374,22 @@ a {
         margin-right: auto;
         width: @screen-lg-min;
     }
+    // Home page
+    .page-home {
+        // Contacts
+        .contact-links {
+            .contact-list {
+                li {
+                    a {
+                        .icon {
+                            margin-right: 22px;
+                        }
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    } 
 }
 
 /**

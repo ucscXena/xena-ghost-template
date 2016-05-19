@@ -74,6 +74,9 @@
 a:hover {
   text-decoration: none;
 }
+hr {
+  border-top: 4px solid #d8d8d8;
+}
 /**
  * Mixins
  */
@@ -198,6 +201,46 @@ a:hover {
   border-radius: 50%;
   background: #ffed99;
 }
+.page-home .contact-links .contact-list {
+  list-style: none;
+  margin: 40px auto;
+  padding: 0;
+}
+.page-home .contact-links .contact-list li {
+  display: block;
+  text-align: left;
+}
+.page-home .contact-links .contact-list li a {
+  color: rgba(26, 83, 92, 0.57);
+  font-family: "San Francisco", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  display: block;
+  padding: 15px 0;
+  vertical-align: middle;
+}
+.page-home .contact-links .contact-list li a .icon {
+  background: url("/assets/image/social-sprite.png") no-repeat;
+  display: inline-block;
+  margin-right: 22px;
+  vertical-align: middle;
+}
+.page-home .contact-links .contact-list li a .icon-twitter {
+  background-position: -58px -3px;
+  height: 21px;
+  width: 25px;
+}
+.page-home .contact-links .contact-list li a .icon-mail {
+  background-position: -31px -3px;
+  height: 20px;
+  width: 25px;
+}
+.page-home .contact-links .contact-list li a .icon-github {
+  background-position: -3px -3px;
+  height: 24px;
+  width: 25px;
+}
 /**
  * Footer
  */
@@ -304,6 +347,18 @@ a:hover {
   .page-home figure img {
     max-width: 229px;
   }
+  .page-home .contact-links .contact-list {
+    margin: 40px 0;
+  }
+  .page-home .contact-links .contact-list li {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    width: 33%;
+  }
+  .page-home .contact-links .contact-list li a .icon {
+    margin-right: 5px;
+  }
 }
 /**
  * Medium only
@@ -325,6 +380,12 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     width: 1440px;
+  }
+  .page-home .contact-links .contact-list li a {
+    font-size: 20px;
+  }
+  .page-home .contact-links .contact-list li a .icon {
+    margin-right: 22px;
   }
 }
 /**
