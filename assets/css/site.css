@@ -201,6 +201,9 @@ hr {
   border-radius: 50%;
   background: #ffed99;
 }
+.page-home .contact-links .section {
+  padding-bottom: 0;
+}
 .page-home .contact-links .contact-list {
   list-style: none;
   margin: 40px auto;
