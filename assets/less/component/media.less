@@ -19,13 +19,17 @@
  *
  * Defining breakpoints outside of these values should be done with discretion, as these breakpoints are designed to
  * work in conjunction with Bootstrap's grid functionality.
+ *
+ * A comprehensive device size breakdown can be found at http://mydevice.io/devices/.
  */
 
+@screen-xs-min: 375px;
 @screen-sm-min: 768px;
 @screen-md-min: 992px;
 @screen-lg-min: 1440px;
 @screen-xl-min: 1921px; // Custom size
 
+@screen-xxs-max: (@screen-xs-min - 1); // Custom size
 @screen-xs-max: (@screen-sm-min - 1);
 @screen-sm-max: (@screen-md-min - 1);
 @screen-md-max: (@screen-lg-min - 1);

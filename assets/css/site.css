@@ -241,6 +241,39 @@ hr {
   height: 24px;
   width: 25px;
 }
+.page-home .partner .partner-cell {
+  margin-bottom: 40px;
+}
+.page-home .partner .partner-cell img {
+  display: block;
+  margin: auto;
+}
+.page-home .partner .partner-first .logo-nci,
+.page-home .partner .partner-first .logo-nci-ga,
+.page-home .partner .partner-first .logo-nci-itcr {
+  height: 29px;
+}
+.page-home .partner .partner-second .logo-treehouse {
+  height: 70px;
+}
+.page-home .partner .partner-second .logo-pcawg {
+  height: 70px;
+}
+.page-home .partner .partner-second .logo-biojs {
+  height: 55px;
+}
+.page-home .partner .partner-second .logo-nih-bd2k {
+  height: 60px;
+}
+.page-home .partner .partner-second .logo-global-alliance {
+  height: 67px;
+}
+.page-home .partner .partner-third .partner-cell {
+  margin-bottom: 0;
+}
+.page-home .partner .partner-third .logo-ucsc-gi {
+  height: 50px;
+}
 /**
  * Footer
  */
@@ -270,6 +303,12 @@ hr {
   .page-home .section {
     padding-bottom: 125px;
     padding-top: 125px;
+  }
+  .page-home figure {
+    margin-bottom: 0;
+  }
+  .page-home figure img {
+    max-width: 229px;
   }
   .page-home .jumbotron {
     padding-top: 37px ;
@@ -341,11 +380,50 @@ hr {
   .page-home .discover .button {
     float: right;
   }
-  .page-home figure {
-    margin-bottom: 0;
+  .page-home .partner .partner-table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
   }
-  .page-home figure img {
-    max-width: 229px;
+  .page-home .partner .partner-table + .partner-table {
+    margin-top: 60px;
+  }
+  .page-home .partner .partner-table .partner-row {
+    display: table-row;
+  }
+  .page-home .partner .partner-table .partner-row .partner-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .page-home .partner .partner-table .partner-row .partner-cell:first-child:last-child {
+    text-align: center;
+  }
+  .page-home .partner .partner-table .partner-row .partner-cell:not(:first-child):not(:last-child) {
+    text-align: center;
+  }
+  .page-home .partner .partner-table .partner-row .partner-cell:last-child {
+    text-align: right;
+  }
+  .page-home .partner .partner-table .partner-row.partner-first {
+    height: 30px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-second .logo-treehouse {
+    height: 60px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-second .logo-pcawg {
+    height: 60px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-second .logo-biojs {
+    height: 40px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-second .logo-nih-bd2k {
+    height: 48px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-second .logo-global-alliance {
+    height: 40px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-third .logo-ucsc-gi {
+    height: 60px;
   }
   .page-home .contact-links .contact-list {
     margin: 40px 0;
@@ -395,6 +473,27 @@ hr {
   .page-home .overview .public-private:after {
     width: 56.5%;
   }
+  .page-home .partner .partner-table .partner-row.partner-first {
+    height: 38px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-second .logo-treehouse {
+    height: 72px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-second .logo-pcawg {
+    height: 72px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-second .logo-biojs {
+    height: 52px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-second .logo-nih-bd2k {
+    height: 60px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-second .logo-global-alliance {
+    height: 52px;
+  }
+  .page-home .partner .partner-table .partner-row.partner-third .logo-ucsc-gi {
+    height: 72px;
+  }
 }
 /**
  * UCSC Xena Web
@@ -443,6 +542,8 @@ hr {
  *
  * Defining breakpoints outside of these values should be done with discretion, as these breakpoints are designed to
  * work in conjunction with Bootstrap's grid functionality.
+ *
+ * A comprehensive device size breakdown can be found at http://mydevice.io/devices/.
  */
 /**
  * UCSC Xena Web

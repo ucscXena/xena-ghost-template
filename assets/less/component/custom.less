@@ -25,7 +25,7 @@ hr {
     border-radius: @radius;
 }
 
-.social-icon-position(@backgroundHorizonal, @backgroundVertical, @width, @height){
+.social-icon-position(@backgroundHorizonal, @backgroundVertical, @width, @height) {
     background-position: @backgroundHorizonal @backgroundVertical;
     height: @height;
     width: @width;
@@ -196,6 +196,46 @@ hr {
             }
         }
     }
+    // Partner
+    .partner {
+        .partner-cell {
+            margin-bottom: 40px;
+            img {
+                display: block;
+                margin: auto;
+            }
+        }
+        .partner-first {
+            .logo-nci, .logo-nci-ga, .logo-nci-itcr {
+                height: 29px; // Must be 29px to shrink NIC logo to fit extra, extra small devices
+            }
+        }
+        .partner-second {
+            .logo-treehouse {
+                height: 70px;
+            }
+            .logo-pcawg {
+                height: 70px;
+            }
+            .logo-biojs {
+                height: 55px;
+            }
+            .logo-nih-bd2k {
+                height: 60px;
+            }
+            .logo-global-alliance {
+                height: 67px;
+            }
+        }
+        .partner-third {
+            .partner-cell {
+                margin-bottom: 0;
+            }
+            .logo-ucsc-gi {
+                height: 50px;
+            }
+        }
+    }
 }
 
 /**
@@ -217,7 +257,7 @@ hr {
 /**
  * Small +
  */
-@media screen and (min-width: @screen-sm-min) {   
+@media screen and (min-width: @screen-sm-min) {
 }
 
 /**
@@ -237,6 +277,12 @@ hr {
         .section {
             padding-bottom: 125px; // Off the mocks - generalizing for reuse by all sections
             padding-top: 125px; // Off the mocks - generalizing for reuse by all sections
+        }
+        figure {
+            margin-bottom: 0;
+            img {
+                max-width: 229px;
+            }
         }
         // Jumbotron
         .jumbotron {
@@ -319,11 +365,59 @@ hr {
                 float: right;
             }
         }
-        // Shared analyze and graph
-        figure {
-            margin-bottom: 0;
-            img {
-                max-width: 229px;
+        // Partner
+        .partner {
+            .partner-table {
+                display: table;
+                border-collapse: collapse;
+                width: 100%;
+                &+.partner-table {
+                    margin-top: 60px;
+                }
+                .partner-row {
+                    display: table-row;
+                    .partner-cell {
+                        display: table-cell;
+                        vertical-align: middle;
+                        &:first-child {
+                            &:last-child {
+                                text-align: center;
+                            }
+                        }
+                        &:not(:first-child):not(:last-child) {
+                            text-align: center;
+                        }
+                        &:last-child {
+                            text-align: right;
+                        }
+
+                    }
+                    &.partner-first {
+                        height: 30px;
+                    }
+                    &.partner-second {
+                        .logo-treehouse {
+                            height: 60px;
+                        }
+                        .logo-pcawg {
+                            height: 60px;
+                        }
+                        .logo-biojs {
+                            height: 40px;
+                        }
+                        .logo-nih-bd2k {
+                            height: 48px;
+                        }
+                        .logo-global-alliance {
+                            height: 40px;
+                        }
+                    }
+                    &.partner-third {
+                        .logo-ucsc-gi {
+                            height: 60px;
+                        }
+                    }
+                }
             }
         }
         // Contacts
@@ -389,7 +483,7 @@ hr {
                 }
             }
         }
-    } 
+    }
 }
 
 /**
@@ -403,6 +497,38 @@ hr {
             .public-private {
                 &:after {
                     width: 56.5%; // Off the mocks - scooting split to the right for larger devices
+                }
+            }
+        }
+        // Partner
+        .partner {
+            .partner-table {
+                .partner-row {
+                    &.partner-first {
+                        height: 38px;
+                    }
+                    &.partner-second {
+                        .logo-treehouse {
+                            height: 72px;
+                        }
+                        .logo-pcawg {
+                            height: 72px;
+                        }
+                        .logo-biojs {
+                            height: 52px;
+                        }
+                        .logo-nih-bd2k {
+                            height: 60px;
+                        }
+                        .logo-global-alliance {
+                            height: 52px;
+                        }
+                    }
+                    &.partner-third {
+                        .logo-ucsc-gi {
+                            height: 72px;
+                        }
+                    }
                 }
             }
         }
