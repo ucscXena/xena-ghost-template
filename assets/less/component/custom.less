@@ -65,8 +65,7 @@ a {
 .page-home {
     figure {
         margin-bottom: 85px;
-        text-align: center;
-        &:last-child {
+        &.last-child {
             margin-bottom: 0;
         }
         img {
@@ -76,6 +75,7 @@ a {
         figcaption {
             .font(2rem, 700);
             margin: 25px 0 0;
+            text-align: center;
         }
     }
     // Jumbotron
@@ -387,7 +387,9 @@ a {
         }
         figure {
             margin-bottom: 0;
-            img {
+            .image-wrapper {
+                margin: 0 auto;
+                max-height: 229px;
                 max-width: 229px;
             }
         }
