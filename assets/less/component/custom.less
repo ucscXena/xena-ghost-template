@@ -25,12 +25,6 @@ hr {
     border-radius: @radius;
 }
 
-.social-icon-position(@backgroundHorizonal, @backgroundVertical, @width, @height) {
-    background-position: @backgroundHorizonal @backgroundVertical;
-    height: @height;
-    width: @width;
-}
-
 /**
  * Global styles
  */
@@ -179,21 +173,32 @@ hr {
                     .font(14px, 700);
                     display: block;
                     padding: 15px 0;
-                    vertical-align: middle;
-                    .icon {
+                }
+                .icon {
+                    &:before {
                         background: url("/assets/image/social-sprite.png") no-repeat;
+                        background-position: 0 -3px;
+                        content: "";
                         display: inline-block;
+                        height: 25px;
                         margin-right: 22px;
                         vertical-align: middle;
+                        width: 25px;
                     }
-                    .icon-twitter {
-                        .social-icon-position(-58px, -3px, 25px, 21px);
+                }
+                .icon-twitter {
+                    &:before {
+                        background-position: -58px;
                     }
-                    .icon-mail {
-                        .social-icon-position(-31px, -3px, 25px, 20px);
+                }
+                .icon-mail {
+                    &:before {
+                        background-position: -31px;
                     }
-                    .icon-github {
-                        .social-icon-position(-3px, -3px, 25px, 24px);
+                }
+                .icon-github {
+                    &:before {
+                        background-position: -3px;
                     }
                 }
             }
