@@ -4,6 +4,11 @@
  * Implementation-specific rules.
  */
 
+// Shrink font size, site wide TODO revisit - revert to 62.5% and update font size definitions accordingly
+html {
+    font-size: 50%;
+}
+
 // Links
 a {
     color: @xena-green-dark;
@@ -125,6 +130,9 @@ a {
                 }
                 h6 {
                     margin-top: 13px;
+                }
+                p {
+                    font-weight: 300;
                 }
                 .button {
                     margin-top: 50px;
@@ -424,8 +432,9 @@ a {
                 .public-private-image-container {
                     position: relative;
                     img {
-                        max-width: 100%;
+                        max-width: 90%; // Shrink for medium devices
                         position: absolute; // Remove from normal flow
+                        right: -14px;
                         top: 18px; // Image is positioned lower than corresponding text
                     }
                 }

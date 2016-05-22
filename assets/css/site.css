@@ -74,6 +74,9 @@
  *
  * Implementation-specific rules.
  */
+html {
+  font-size: 50%;
+}
 a {
   color: #1a535c;
 }
@@ -180,6 +183,9 @@ a:hover {
 }
 .page-home .overview .public-private .section h6 {
   margin-top: 13px;
+}
+.page-home .overview .public-private .section p {
+  font-weight: 300;
 }
 .page-home .overview .public-private .section .button {
   margin-top: 50px;
@@ -422,8 +428,9 @@ a:hover {
     position: relative;
   }
   .page-home .overview .value-prop-description .public-private-image-container img {
-    max-width: 100%;
+    max-width: 90%;
     position: absolute;
+    right: -14px;
     top: 18px;
   }
   .page-home .overview .section-peach {
