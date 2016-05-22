@@ -6,13 +6,10 @@
 
 // Links
 a {
+    color: @xena-green-dark;
     &:hover {
         text-decoration: none;
     }
-}
-
-hr {
-    border-top: 4px solid @xena-grey;
 }
 
 /**
@@ -26,17 +23,39 @@ hr {
 }
 
 /**
+ * Local variables
+ */
+@section-padding: 71px;
+
+/**
+ * Local variables
+ */
+@section-padding: 71px;
+
+/**
  * Global styles
  */
 .section {
-    padding-bottom: 71px; // Off the mocks - generalizing for reuse by all sections
-    padding-top: 71px; // Off the mocks - generalizing for reuse by all sections
+    padding-bottom: @section-padding; // Off the mocks - generalizing for reuse by all sections
+    padding-top: @section-padding; // Off the mocks - generalizing for reuse by all sections
     // Set up standard for h6 "subtitle" inside sections
     h6 {
         &.subtitle {
             font-style: italic;
             margin-bottom: 60px;
         }
+    }
+    // Adds border to bottom of content inside section
+    // TODO revisit - pull base styles out for each home page section, refactor this to mixin, invoke from page-home selector of generalized section styles
+    .with-border-top {
+        border-top: 4px solid @xena-grey;
+        padding-top: @section-padding; // Off the mocks, matching with section padding
+    }
+    // Adds border to top of content inside section
+    // TODO revisit - as above with matching with-border-top class
+    .with-border-bottom {
+        border-bottom: 4px solid @xena-grey;
+        padding-bottom: @section-padding; // Off the mocks, matching with section padding
     }
 }
 
@@ -159,11 +178,20 @@ hr {
     // Contacts
     .contact-links {
         .section {
+            // Squash up against partners below
             padding-bottom: 0;
+        }
+        .with-border-bottom {
+            // Squash padding to match mocks
+            padding-bottom: 40px;
+        }
+        .with-border-top {
+            // Squash padding to match mocks
+            padding-top: 40px;
         }
         .contact-list {
             list-style: none;
-            margin: 40px auto;
+            margin: 0 auto;
             padding: 0;
             li {
                 display: block;
@@ -244,6 +272,40 @@ hr {
             }
         }
     }
+    // Forum
+    .forum {
+        .section {
+            // Squash up against contact links below
+            padding-bottom: 0;
+        }
+        h6 {
+            font-weight: 300;
+            a {
+                display: inline-block;
+                font-size: 12px;
+                margin-left: 40px;
+            }
+        }
+        .button-green-dark {
+            display: block;
+            margin: 60px 0;
+        }
+        .forum-group {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                margin: 40px 0;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a {
+                    display: block;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }
 
 /**
@@ -273,6 +335,9 @@ hr {
  */
 @media screen and (min-width: @screen-md-min) {
 
+    // Local variables
+    @section-padding: 125px;
+
     // Hide public/private image overhang on right hand side and skewed background in home page public/private
     // section. (See also http://stackoverflow.com/a/18411774)
     html, body {
@@ -283,8 +348,11 @@ hr {
     .page-home {
         // Shared...
         .section {
-            padding-bottom: 125px; // Off the mocks - generalizing for reuse by all sections
-            padding-top: 125px; // Off the mocks - generalizing for reuse by all sections
+            padding-bottom: @section-padding; // Off the mocks - generalizing for reuse by all sections
+            padding-top: @section-padding; // Off the mocks - generalizing for reuse by all sections
+        }
+        .with-border-top {
+            padding-top: @section-padding; // Off the mocks, matching with section padding
         }
         figure {
             margin-bottom: 0;
@@ -297,7 +365,7 @@ hr {
             // Padding of jumbotron calculated as:
             // Top: padding top + line height of h1 + margin bottom of header = 109px
             // Bottom: padding bottom + height height of h3 = 60px
-            padding-top: 37px ;
+            padding-top: 37px;
             padding-bottom: 65px;
             text-align: left;
             h1 {
@@ -379,7 +447,7 @@ hr {
                 display: table;
                 border-collapse: collapse;
                 width: 100%;
-                &+.partner-table {
+                & + .partner-table {
                     margin-top: 60px;
                 }
                 .partner-row {
@@ -428,10 +496,16 @@ hr {
                 }
             }
         }
+        // Forum
+        .forum {
+            .button-green-dark {
+                margin: 60px auto 0;
+            }
+        }
         // Contacts
         .contact-links {
             .contact-list {
-                margin: 40px 0;
+                margin: 0;
                 li {
                     display: inline-block;
                     margin: 0;
@@ -476,6 +550,7 @@ hr {
         margin-right: auto;
         width: @screen-lg-min;
     }
+
     // Home page
     .page-home {
         // Contacts

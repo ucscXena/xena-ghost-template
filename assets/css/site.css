@@ -61,6 +61,9 @@
   border-radius: 4px;
   -webkit-appearance: none;
 }
+.button.button-green-dark {
+  background: #1a535c;
+}
 /**
  * UCSC Xena Web
  *
@@ -71,14 +74,21 @@
  *
  * Implementation-specific rules.
  */
+a {
+  color: #1a535c;
+}
 a:hover {
   text-decoration: none;
 }
 hr {
   border-top: 4px solid #d8d8d8;
+  margin: 0;
 }
 /**
  * Mixins
+ */
+/**
+ * Local variables
  */
 /**
  * Global styles
@@ -90,6 +100,14 @@ hr {
 .section h6.subtitle {
   font-style: italic;
   margin-bottom: 60px;
+}
+.section .with-border-top {
+  border-top: 4px solid #d8d8d8;
+  padding-top: 71px;
+}
+.section .with-border-bottom {
+  border-bottom: 4px solid #d8d8d8;
+  padding-bottom: 71px;
 }
 /**
  * Home page
@@ -204,9 +222,15 @@ hr {
 .page-home .contact-links .section {
   padding-bottom: 0;
 }
+.page-home .contact-links .with-border-bottom {
+  padding-bottom: 40px;
+}
+.page-home .contact-links .with-border-top {
+  padding-top: 40px;
+}
 .page-home .contact-links .contact-list {
   list-style: none;
-  margin: 40px auto;
+  margin: 0 auto;
   padding: 0;
 }
 .page-home .contact-links .contact-list li {
@@ -274,6 +298,36 @@ hr {
 .page-home .partner .partner-third .logo-ucsc-gi {
   height: 50px;
 }
+.page-home .forum .section {
+  padding-bottom: 0;
+}
+.page-home .forum h6 {
+  font-weight: 300;
+}
+.page-home .forum h6 a {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 40px;
+}
+.page-home .forum .button-green-dark {
+  display: block;
+  margin: 60px 0;
+}
+.page-home .forum .forum-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.page-home .forum .forum-group li {
+  margin: 40px 0;
+}
+.page-home .forum .forum-group li:last-child {
+  margin-bottom: 0;
+}
+.page-home .forum .forum-group li a {
+  display: block;
+  font-size: 20px;
+}
 /**
  * Footer
  */
@@ -302,6 +356,9 @@ hr {
   }
   .page-home .section {
     padding-bottom: 125px;
+    padding-top: 125px;
+  }
+  .page-home .with-border-top {
     padding-top: 125px;
   }
   .page-home figure {
@@ -425,8 +482,11 @@ hr {
   .page-home .partner .partner-table .partner-row.partner-third .logo-ucsc-gi {
     height: 60px;
   }
+  .page-home .forum .button-green-dark {
+    margin: 60px auto 0;
+  }
   .page-home .contact-links .contact-list {
-    margin: 40px 0;
+    margin: 0;
   }
   .page-home .contact-links .contact-list li {
     display: inline-block;
