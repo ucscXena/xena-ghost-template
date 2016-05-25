@@ -17,6 +17,13 @@ a {
     }
 }
 
+// Inputs
+input {
+    &:focus {
+        outline:0;
+    }
+}
+
 /**
  * Mixins
  */
@@ -188,28 +195,73 @@ a {
         h6 {
             font-weight: 300;
         }
-        .form-group {
-            margin-top: 40px;
-            .form-control {
-                border-radius: 4px;
-                border: solid 4px @xena-grey;
-                color: @xena-green-dark;
-                display: block;
-                font-size: 2rem;
-                font-weight: 700;
-                height: 55px;
-                margin: 0;
-                padding: 10px;
-                width: 100%;
-            }
-            ::-webkit-input-placeholder {
-                color: @xena-grey-light;
-            }
-            ::-moz-placeholder {
-                color: @xena-grey-light;
-            }
-            :-ms-input-placeholder {  
-                color: @xena-grey-light;
+        #mc_embed_signup {
+            #mc-embedded-subscribe-form {
+                padding: 0;
+                .form-group {
+                    margin-top: 40px;
+                    padding-bottom: 0;
+                    width: 100%;
+                    .form-control {
+                        border-radius: 4px;
+                        border: solid 4px @xena-grey;
+                        color: @xena-green-dark;
+                        display: block;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        margin: 0;
+                        padding: 10px;
+                        text-indent: 0;
+                        width: 100%;
+                        &.mce_inline_error {
+                            border-color: @xena-peach;
+                        }
+                    }
+                    ::-webkit-input-placeholder {
+                        color: @xena-grey-light;
+                    }
+                    ::-moz-placeholder {
+                        color: @xena-grey-light;
+                    }
+                    :-ms-input-placeholder {  
+                        color: @xena-grey-light;
+                    }
+                    div.mce_inline_error {
+                        display: block;
+                        font-size: 1.8rem;
+                        padding: 5px 5px;
+                        position: absolute;
+                        text-align: left;
+                    }
+                    div#mce-responses {
+                        margin: 0;
+                        text-align: left;
+                        top: 0;
+                        width: 100%;
+                        #mce-success-response, div#mce-error-response {
+                            font-size: 1.8rem;
+                            font-weight: normal;
+                            margin: 0;
+                            padding: 5px 5px;
+                            top: 0;
+                            width: 100%;
+                        }
+                        #mce-success-response {
+                            color: @xena-green-dark;
+                            position: absolute;
+                            top: 52px;
+                        }
+                    }
+                    .button {
+                        background-color: @xena-peach;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        height: 48px;
+                        line-height: 1;
+                        margin: 0;
+                        padding: 13px 20px;
+                    }
+                }
             }
         }
     }
