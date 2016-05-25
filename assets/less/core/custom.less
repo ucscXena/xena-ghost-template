@@ -4,11 +4,6 @@
  * Implementation-specific rules.
  */
 
-// Shrink font size, site wide TODO revisit - revert to 62.5% and update font size definitions accordingly
-html {
-    font-size: 50%;
-}
-
 // Links
 a {
     color: @xena-green-dark;
@@ -265,63 +260,6 @@ input {
             }
         }
     }
-    // Contacts
-    .contact-links {
-        .section {
-            // Squash up against partners below
-            padding-bottom: 0;
-        }
-        .with-border-bottom {
-            // Squash padding to match mocks
-            padding-bottom: 40px;
-        }
-        .with-border-top {
-            // Squash padding to match mocks
-            padding-top: 40px;
-        }
-        .contact-list {
-            list-style: none;
-            margin: 0 auto;
-            padding: 0;
-            li {
-                display: block;
-                text-align: left;
-                a {
-                    color: @xena-grey-light;
-                    .font(1.4rem, 700);
-                    display: block;
-                    padding: 15px 0;
-                }
-                .icon {
-                    &:before {
-                        background: url("/assets/image/social-sprite.png") no-repeat;
-                        background-position: 0 -3px;
-                        content: "";
-                        display: inline-block;
-                        height: 25px;
-                        margin-right: 22px;
-                        vertical-align: middle;
-                        width: 25px;
-                    }
-                }
-                .icon-twitter {
-                    &:before {
-                        background-position: -58px;
-                    }
-                }
-                .icon-mail {
-                    &:before {
-                        background-position: -31px;
-                    }
-                }
-                .icon-github {
-                    &:before {
-                        background-position: -3px;
-                    }
-                }
-            }
-        }
-    }
     // Partner
     .partner {
         .partner-cell {
@@ -398,6 +336,84 @@ input {
         }
     }
 }
+
+/**
+ * Backpage
+ */
+ .page-post {
+     .section {
+         padding: 10px 15px;
+         h1 {
+             color: @xena-aqua;
+         }
+         h2, h3, h4, h5, h6 {
+             color: @xena-peach;
+         }
+         a {
+             color: @xena-aqua;
+         }
+     }
+     // Main post image
+     .featured-image {
+         .section {
+             padding: 5px 0;
+             img {
+                 margin: 0 auto;
+                 width: 100%;
+             }
+         }
+     }
+     // Contact links
+    .contact-links {
+        .section {
+            padding: 10px 0px;
+            .contact-list {
+                list-style: none;
+                margin: 0 auto;
+                padding: 0;
+                li {
+                    display: block;
+                    text-align: left;
+                    a {
+                        color: rgba(26, 83, 92, 0.57);
+                        display: block;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        padding: 15px 0;
+                    }
+                    .icon {
+                        &:before {
+                            background: url("/assets/image/backpage-social-sprite.png") no-repeat;
+                        }
+                    }
+                    .icon-twitter {
+                        &:before {
+                            background-position: -58px;
+                        }
+                    }
+                    .icon-mail {
+                        &:before {
+                            background-position: -31px;
+                        }
+                    }
+                    .icon-github {
+                        &:before {
+                            background-position: -3px;
+                        }
+                    }
+                }
+            }
+            .with-border-bottom {
+                border-bottom: 0px;
+                padding-bottom: 40px;
+            }
+            .with-border-top {
+                border-top: 4px solid @xena-green-light;
+                padding-top: 40px;
+            }
+        }
+    }
+ }
 
 /**
  * Footer
@@ -596,23 +612,6 @@ input {
                 margin: 60px auto 0;
             }
         }
-        // Contacts
-        .contact-links {
-            .contact-list {
-                margin: 0;
-                li {
-                    display: inline-block;
-                    margin: 0;
-                    text-align: center;
-                    width: 33%;
-                    a {
-                        .icon {
-                            margin-right: 5px;
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -643,23 +642,6 @@ input {
         margin-left: auto;
         margin-right: auto;
         width: @screen-lg-min;
-    }
-
-    // Home page
-    .page-home {
-        // Contacts
-        .contact-links {
-            .contact-list {
-                li {
-                    a {
-                        .icon {
-                            margin-right: 22px;
-                        }
-                        font-size: 2rem;
-                    }
-                }
-            }
-        }
     }
 }
 

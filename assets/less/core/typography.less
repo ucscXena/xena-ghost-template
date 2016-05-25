@@ -8,7 +8,6 @@
  * Mixins
  */
 
-
 // Specify font size, weight and style, with style defaulting to "normal"
 .font(@font-size, @font-weight, @font-style:normal) {
 
@@ -22,6 +21,11 @@
  * Classes
  */
 
+// Shrink font size, site wide TODO revisit - revert to 62.5% and update font size definitions accordingly
+html {
+    font-size: 50%;
+}
+
 body {
     color: @xena-green-dark;
     font-family: "San Francisco", sans-serif;
@@ -33,6 +37,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4em;
     margin: 0;
     padding: 0;
+}
+
+h1 {
+    .font(3.4rem, 600);
 }
 
 h5 {

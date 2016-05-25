@@ -74,9 +74,6 @@
  *
  * Implementation-specific rules.
  */
-html {
-  font-size: 50%;
-}
 a {
   color: #1a535c;
 }
@@ -298,52 +295,6 @@ input:focus {
   margin: 0;
   padding: 13px 20px;
 }
-.page-home .contact-links .section {
-  padding-bottom: 0;
-}
-.page-home .contact-links .with-border-bottom {
-  padding-bottom: 40px;
-}
-.page-home .contact-links .with-border-top {
-  padding-top: 40px;
-}
-.page-home .contact-links .contact-list {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-}
-.page-home .contact-links .contact-list li {
-  display: block;
-  text-align: left;
-}
-.page-home .contact-links .contact-list li a {
-  color: rgba(26, 83, 92, 0.57);
-  font-family: "San Francisco", sans-serif;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 700;
-  display: block;
-  padding: 15px 0;
-}
-.page-home .contact-links .contact-list li .icon:before {
-  background: url("/assets/image/social-sprite.png") no-repeat;
-  background-position: 0 -3px;
-  content: "";
-  display: inline-block;
-  height: 25px;
-  margin-right: 22px;
-  vertical-align: middle;
-  width: 25px;
-}
-.page-home .contact-links .contact-list li .icon-twitter:before {
-  background-position: -58px;
-}
-.page-home .contact-links .contact-list li .icon-mail:before {
-  background-position: -31px;
-}
-.page-home .contact-links .contact-list li .icon-github:before {
-  background-position: -3px;
-}
 .page-home .partner .partner-cell {
   margin-bottom: 40px;
 }
@@ -407,6 +358,71 @@ input:focus {
 .page-home .forum .forum-group li a {
   display: block;
   font-size: 2rem;
+}
+/**
+ * Backpage
+ */
+.page-post .section {
+  padding: 10px 15px;
+}
+.page-post .section h1 {
+  color: #4ecdc4;
+}
+.page-post .section h2,
+.page-post .section h3,
+.page-post .section h4,
+.page-post .section h5,
+.page-post .section h6 {
+  color: #ff6b6b;
+}
+.page-post .section a {
+  color: #4ecdc4;
+}
+.page-post .featured-image .section {
+  padding: 5px 0;
+}
+.page-post .featured-image .section img {
+  margin: 0 auto;
+  width: 100%;
+}
+.page-post .contact-links .section {
+  padding: 10px 0px;
+}
+.page-post .contact-links .section .contact-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.page-post .contact-links .section .contact-list li {
+  display: block;
+  text-align: left;
+}
+.page-post .contact-links .section .contact-list li a {
+  color: rgba(26, 83, 92, 0.57);
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 15px 0;
+}
+.page-post .contact-links .section .contact-list li .icon:before {
+  background: url("/assets/image/backpage-social-sprite.png") no-repeat;
+}
+.page-post .contact-links .section .contact-list li .icon-twitter:before {
+  background-position: -58px;
+}
+.page-post .contact-links .section .contact-list li .icon-mail:before {
+  background-position: -31px;
+}
+.page-post .contact-links .section .contact-list li .icon-github:before {
+  background-position: -3px;
+}
+.page-post .contact-links .section .with-border-bottom {
+  border-bottom: 0px;
+  padding-bottom: 40px;
+}
+.page-post .contact-links .section .with-border-top {
+  border-top: 4px solid #f7fff7;
+  padding-top: 40px;
 }
 /**
  * Footer
@@ -568,18 +584,6 @@ input:focus {
   .page-home .forum .button-green-dark {
     margin: 60px auto 0;
   }
-  .page-home .contact-links .contact-list {
-    margin: 0;
-  }
-  .page-home .contact-links .contact-list li {
-    display: inline-block;
-    margin: 0;
-    text-align: center;
-    width: 33%;
-  }
-  .page-home .contact-links .contact-list li a .icon {
-    margin-right: 5px;
-  }
 }
 /**
  * Medium only
@@ -601,12 +605,6 @@ input:focus {
     margin-left: auto;
     margin-right: auto;
     width: 1440px;
-  }
-  .page-home .contact-links .contact-list li a {
-    font-size: 2rem;
-  }
-  .page-home .contact-links .contact-list li a .icon {
-    margin-right: 22px;
   }
 }
 /**
@@ -688,6 +686,140 @@ input:focus {
  *
  * A comprehensive device size breakdown can be found at http://mydevice.io/devices/.
  */
+/**
+ * UCSC Xena Web
+ *
+ * Typography-related rules.
+ */
+/**
+ * Mixins
+ */
+/**
+ * Classes
+ */
+html {
+  font-size: 50%;
+}
+body {
+  color: #1a535c;
+  font-family: "San Francisco", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+  font-family: inherit;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 3.4rem;
+  font-style: normal;
+  font-weight: 600;
+}
+h5 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 3.4rem;
+  font-style: normal;
+  font-weight: 600;
+}
+h6 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+}
+p {
+  font-size: 1.8rem;
+  line-height: 1.6em;
+}
+.italic {
+  font-style: italic;
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for contact links component.
+ */
+.contact-links .section {
+  padding-bottom: 0;
+}
+.contact-links .with-border-bottom {
+  padding-bottom: 40px;
+}
+.contact-links .with-border-top {
+  padding-top: 40px;
+}
+.contact-links .contact-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.contact-links .contact-list li {
+  display: block;
+  text-align: left;
+}
+.contact-links .contact-list li a {
+  color: rgba(26, 83, 92, 0.57);
+  font-family: "San Francisco", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  display: block;
+  padding: 15px 0;
+}
+.contact-links .contact-list li .icon:before {
+  background: url("/assets/image/social-sprite.png") no-repeat;
+  background-position: 0 -3px;
+  content: "";
+  display: inline-block;
+  height: 25px;
+  margin-right: 22px;
+  vertical-align: middle;
+  width: 25px;
+}
+.contact-links .contact-list li .icon-twitter:before {
+  background-position: -58px;
+}
+.contact-links .contact-list li .icon-mail:before {
+  background-position: -31px;
+}
+.contact-links .contact-list li .icon-github:before {
+  background-position: -3px;
+}
+/**
+ * Medium +
+ */
+@media screen and (min-width: 992px) {
+  .contact-links .contact-list {
+    margin: 0;
+  }
+  .contact-links .contact-list li {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    width: 33%;
+  }
+  .contact-links .contact-list li a .icon {
+    margin-right: 5px;
+  }
+}
+/**
+ * Large +
+ */
+@media screen and (min-width: 1440px) {
+  .contact-links .contact-list li a {
+    font-size: 2rem;
+  }
+  .contact-links .contact-list li a .icon {
+    margin-right: 22px;
+  }
+}
 /**
  * UCSC Xena Web
  *
@@ -850,50 +982,4 @@ input:focus {
   .navbar .navbar-nav li {
     margin-left: 75px;
   }
-}
-/**
- * UCSC Xena Web
- *
- * Typography-related rules.
- */
-/**
- * Mixins
- */
-/**
- * Classes
- */
-body {
-  color: #1a535c;
-  font-family: "San Francisco", sans-serif;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: inherit;
-  font-family: inherit;
-  line-height: 1.4em;
-  margin: 0;
-  padding: 0;
-}
-h5 {
-  font-family: "San Francisco", sans-serif;
-  font-size: 3.4rem;
-  font-style: normal;
-  font-weight: 600;
-}
-h6 {
-  font-family: "San Francisco", sans-serif;
-  font-size: 2.8rem;
-  font-style: normal;
-  font-weight: 600;
-}
-p {
-  font-size: 1.8rem;
-  line-height: 1.6em;
-}
-.italic {
-  font-style: italic;
 }
