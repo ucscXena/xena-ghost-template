@@ -905,11 +905,10 @@ p {
     background-color: #1a535c;
     height: 100%;
     left: 0;
-    margin-top: 125px;
     padding-top: 62.5px;
     position: fixed;
     text-align: center;
-    top: 0;
+    top: 125px;
     opacity: 0;
     width: 100%;
   }
