@@ -64,6 +64,10 @@
 .button.button-green-dark {
   background: #1a535c;
 }
+.button.button-white {
+  background-color: #ffffff;
+  color: #ff6b6b;
+}
 /**
  * UCSC Xena Web
  *
@@ -211,11 +215,16 @@ input:focus {
   background: #ffe66d;
   color: #1a535c;
 }
-.page-home .graph .section-yellow button {
-  display: none;
-  left: 20%;
+.page-home .graph .section-yellow figure .button {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  left: 50%;
   position: absolute;
-  top: 30%;
+  top: 50%;
 }
 .page-home .graph .section-yellow figure img {
   -webkit-border-radius: 50%;
@@ -460,10 +469,44 @@ input:focus {
   .page-home figure {
     margin-bottom: 0;
   }
+  .page-home figure .hover:before {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgba(255, 107, 107, 0.89);
+    content: "";
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  .page-home figure .hover .button {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page-home figure .hover:hover:before {
+    opacity: 1;
+  }
+  .page-home figure .hover:hover .button {
+    opacity: 1;
+  }
   .page-home figure .image-wrapper {
     margin: 0 auto;
     max-height: 229px;
     max-width: 229px;
+    position: relative;
+  }
+  .page-home figure .image-wrapper .button-white {
+    min-width: 158px;
   }
   .page-home .jumbotron {
     padding-top: 37px;

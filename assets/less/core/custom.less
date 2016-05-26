@@ -171,13 +171,14 @@ input {
         .section-yellow {
             background: @xena-yellow;
             color: @xena-green-dark;
-            button {
-                display: none;
-                left: 20%;
-                position: absolute;
-                top: 30%;
-            }
             figure {
+                .button {
+                    .transform(translate(-50%, -50%));
+                    opacity: 0;
+                    left: 50%;
+                    position: absolute;
+                    top: 50%;
+                }
                 img {
                     .rounded(50%);
                     background: @xena-yellow-light;
@@ -463,11 +464,38 @@ input {
         }
         figure {
             margin-bottom: 0;
+            .hover {
+                &:before {
+                    .rounded(50%);
+                    background-color: @xena-peach-light;
+                    content: "";
+                    height: 100%;
+                    position: absolute;
+                    opacity: 0;
+                    width: 100%;
+                    .transition(opacity 0.3s ease);
+                }
+                .button {
+                    .transition(all 0.3s ease);
+                }
+                &:hover {
+                    &:before {
+                        opacity: 1;
+                    }
+                    .button {
+                        opacity: 1;
+                    }
+                }    
+            }
             .image-wrapper {
                 margin: 0 auto;
                 max-height: 229px;
                 max-width: 229px;
-            }
+                position: relative;
+                .button-white {
+                    min-width: 158px;
+                }
+            }    
         }
         // Jumbotron
         .jumbotron {
