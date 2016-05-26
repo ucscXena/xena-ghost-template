@@ -81,6 +81,11 @@
 
             if ( $body.hasClass(CSS_NAVBAR_OPEN) ) {
 
+                // Close the menu when a menu item is clicked.
+                $(".navbar-nav li a").on("click", function() {
+                    $('body').addClass(CSS_NAVBAR_CLOSED).removeClass(CSS_NAVBAR_OPEN);
+                });
+
                 $body.on("touchmove", function(evt) {
 
                     // No scroll while menu is open
