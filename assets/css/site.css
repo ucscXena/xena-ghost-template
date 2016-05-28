@@ -390,6 +390,9 @@ input:focus {
 .page-post .section h6 {
   color: #ff6b6b;
 }
+.page-post .section p {
+  line-height: 2.1em;
+}
 .page-post .section a {
   color: #4ecdc4;
 }

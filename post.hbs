@@ -4,10 +4,11 @@
     {{#post}}
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-4 section">
+                <div class="col-xs-12 col-md-4 section">
                     <h1>{{title}}</h1>
+                    <p>{{@blog.description}}</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8">
                     {{#if image}}
                         <div class="featured-image">
                             <div class="col-xs-12 section">
