@@ -960,14 +960,14 @@ p {
   }
   .navbar .navbar-nav {
     background-color: #1a535c;
-    height: 100%;
+    bottom: 0;
     left: 0;
     padding-top: 62.5px;
     position: fixed;
     text-align: center;
     top: 125px;
     opacity: 0;
-    width: 100%;
+    right: 0;
   }
   .navbar .navbar-nav li a {
     color: #ffffff;
@@ -1005,11 +1005,22 @@ p {
     animation: animate-in 0.5s 1;
     opacity: 1;
     z-index: 999;
-    overflow-y: scroll;
+    overflow: scroll;
   }
   .navbar-closed .navbar .navbar-nav {
     animation: animate-out 0.5s 1;
     opacity: 0;
+  }
+}
+/**
+ * Extra small and small devices, landscape only
+ */
+@media screen and (max-width: 991px) and (orientation: landscape) {
+  .navbar .navbar-nav {
+    padding-top: 10px;
+  }
+  .navbar .navbar-nav li a {
+    padding: 5px 0;
   }
 }
 /**

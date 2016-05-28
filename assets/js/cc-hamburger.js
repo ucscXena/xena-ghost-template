@@ -18,6 +18,8 @@
         var CSS_NAVBAR_OPEN = "navbar-open";
         var CSS_NAVBAR_CLOSED = "navbar-closed";
 
+        var CSS_SELECTOR_MENU_ITEM = ".navbar-nav li a";
+
         /**
          * PUBLIC API
          */
@@ -55,48 +57,119 @@
                 // Mind you own business!
                 evt.preventDefault();
 
-                // Menu has been previously toggled - swap out open/closed state
+                // If menu has never been opened before, add closed state
                 var $body = $("body");
-                if ( $body.hasClass(CSS_NAVBAR_CLOSED) || $body.hasClass(CSS_NAVBAR_OPEN) ) {
-
-                    $body.toggleClass([CSS_NAVBAR_CLOSED, CSS_NAVBAR_OPEN].join(" "));
+                if ( !$body.hasClass(CSS_NAVBAR_CLOSED) && !$body.hasClass(CSS_NAVBAR_OPEN) ) {
+                    $body.addClass(CSS_NAVBAR_CLOSED);
                 }
-                // Menu has never been toggled - open menu
+
+                // Handle case where menu is currently closed
+                if ( $body.hasClass(CSS_NAVBAR_CLOSED) ) {
+                    showMenu($body);
+                }
+                // Handle case where menu is currently open
                 else {
-
-                    $body.addClass(CSS_NAVBAR_OPEN);
+                    hideMenu($body);
                 }
-
-                // Disable/enable scroll according to menu state
-                toggleScroll($body);
             });
         }
 
         /**
-         * Prevent scroll when menu is open.
+         * Disable click handler that closes menu on click of menu item.
+         */
+        function disableClickToClose() {
+
+            // Close the menu when a menu item is clicked.
+            $(CSS_SELECTOR_MENU_ITEM).unbind("click");
+        }
+
+        /**
+         * Prevent scroll when menu is open. Touch devices only - non-touch devices use overflow CSS property to
+         * control scroll.
          *
          * @param $body {Object}
          */
-        function toggleScroll($body) {
+        function disableScroll($body) {
 
-            if ( $body.hasClass(CSS_NAVBAR_OPEN) ) {
+            $body.on("touchmove", function(evt) {
 
-                // Close the menu when a menu item is clicked.
-                $(".navbar-nav li a").on("click", function() {
-                    $('body').addClass(CSS_NAVBAR_CLOSED).removeClass(CSS_NAVBAR_OPEN);
-                });
-
-                $body.on("touchmove", function(evt) {
-
-                    // No scroll while menu is open
+                // Enable scroll only if we're scrolling the actual menu
+                if ( $(evt.target).parents(".navbar-nav").length === 0 ) {
                     evt.preventDefault();
-                });
-            }
-            else {
-                $body.unbind("touchmove");
-            }
+                }
+            });
         }
 
+        /**
+         * Enable click handler to close menu on click of menu item.
+         *
+         * @param $body {Object}
+         */
+        function enableClickToClose($body) {
+
+            // Close the menu when a menu item is clicked.
+            $(CSS_SELECTOR_MENU_ITEM).on("click", function() {
+
+                hideMenu($body);
+
+                // Remove this click handler
+                disableClickToClose();
+            });
+        }
+
+        /**
+         * Enable scroll when menu is closed.
+         *
+         * @param $body {Object}
+         */
+        function enableScroll($body) {
+
+            $body.unbind("touchmove");
+        }
+
+        /**
+         * Hide menu.
+         * 
+         * @param $body {Object}
+         */
+        function hideMenu($body) {
+
+            // Toggle visibility of menu
+            toggleMenu($body);
+
+            // Disable click to close menu
+            disableClickToClose();
+
+            // Enable scroll
+            enableScroll($body);
+        }
+
+        /**
+         * Show menu.
+         *
+         * @param $body {Object}
+         */
+        function showMenu($body) {
+
+            // Toggle visibility of menu
+            toggleMenu($body);
+
+            // Enable click to close menu
+            enableClickToClose($body);
+
+            // Disable scroll
+            disableScroll($body);
+        }
+
+        /**
+         * Toggle menu visibility by swapping out open and close state CSS classes.
+         *
+         * @param $body {Object}
+         */
+        function toggleMenu($body) {
+
+            $body.toggleClass([CSS_NAVBAR_CLOSED, CSS_NAVBAR_OPEN].join(" "));
+        }
     })();
 
     // Kick off initialization of hamburger...
