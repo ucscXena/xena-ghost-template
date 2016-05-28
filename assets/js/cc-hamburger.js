@@ -18,6 +18,7 @@
         var CSS_NAVBAR_OPEN = "navbar-open";
         var CSS_NAVBAR_CLOSED = "navbar-closed";
 
+        var CSS_SELECTOR_NAVBAR_NAV = ".navbar-nav";
         var CSS_SELECTOR_MENU_ITEM = ".navbar-nav li a";
 
         /**
@@ -69,7 +70,7 @@
                 }
                 // Handle case where menu is currently open
                 else {
-                    hideMenu($body);
+                    hideMenu($body, true);
                 }
             });
         }
@@ -94,7 +95,7 @@
             $body.on("touchmove", function(evt) {
 
                 // Enable scroll only if we're scrolling the actual menu
-                if ( $(evt.target).parents(".navbar-nav").length === 0 ) {
+                if ( $(evt.target).parents(CSS_SELECTOR_NAVBAR_NAV).length === 0 ) {
                     evt.preventDefault();
                 }
             });
@@ -110,7 +111,7 @@
             // Close the menu when a menu item is clicked.
             $(CSS_SELECTOR_MENU_ITEM).on("click", function() {
 
-                hideMenu($body);
+                hideMenu($body, false);
 
                 // Remove this click handler
                 disableClickToClose();
@@ -131,8 +132,13 @@
          * Hide menu.
          * 
          * @param $body {Object}
+         * @param enableAnimateOut {boolean}
          */
-        function hideMenu($body) {
+        function hideMenu($body, enableAnimateOut) {
+
+            // We do not always want to animate the close, for example if a user is clicking on a link
+            // in the menu
+                $(CSS_SELECTOR_NAVBAR_NAV).toggleClass("animate-out", enableAnimateOut);
 
             // Toggle visibility of menu
             toggleMenu($body);
