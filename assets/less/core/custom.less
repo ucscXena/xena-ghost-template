@@ -72,12 +72,13 @@ input {
 .page-home {
     figure {
         margin-bottom: 85px;
+        text-align: center; // Center images on devices where image width is < 100%
         &.last-child {
             margin-bottom: 0;
         }
         img {
             margin: 0 auto;
-            width: 100%;
+            width: 90%;
         }
         figcaption {
             .font(2rem, 700);
@@ -384,7 +385,7 @@ input {
                     }
                     .icon {
                         &:before {
-                            background: url("/assets/image/backpage-social-sprite.png") no-repeat;
+                            background: url("/assets/image/site/sprite-social-aqua.png") no-repeat;
                         }
                     }
                     .icon-twitter {
@@ -436,6 +437,16 @@ input {
  * Small +
  */
 @media screen and (min-width: @screen-sm-min) {
+
+    // Home page
+    .page-home {
+        // Shared...
+        figure {
+            img {
+                width: 60%; // Shrink for small devices where image is 100% width
+            }
+        }
+    }
 }
 
 /**
@@ -495,7 +506,10 @@ input {
                 .button-white {
                     min-width: 158px;
                 }
-            }    
+            }
+            img {
+                width: 100%; // Maximize for medium +
+            }
         }
         // Jumbotron
         .jumbotron {

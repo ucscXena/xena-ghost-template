@@ -125,13 +125,14 @@ input:focus {
  */
 .page-home figure {
   margin-bottom: 85px;
+  text-align: center;
 }
 .page-home figure.last-child {
   margin-bottom: 0;
 }
 .page-home figure img {
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
 }
 .page-home figure figcaption {
   font-family: "San Francisco", sans-serif;
@@ -419,7 +420,7 @@ input:focus {
   padding: 15px 0;
 }
 .page-post .contact-links .section .contact-list li .icon:before {
-  background: url("/assets/image/backpage-social-sprite.png") no-repeat;
+  background: url("/assets/image/site/sprite-social-aqua.png") no-repeat;
 }
 .page-post .contact-links .section .contact-list li .icon-twitter:before {
   background-position: -58px;
@@ -456,6 +457,11 @@ input:focus {
 /**
  * Small +
  */
+@media screen and (min-width: 768px) {
+  .page-home figure img {
+    width: 60%;
+  }
+}
 /**
  * Medium +
  */
@@ -512,6 +518,9 @@ input:focus {
   }
   .page-home figure .image-wrapper .button-white {
     min-width: 158px;
+  }
+  .page-home figure img {
+    width: 100%;
   }
   .page-home .jumbotron {
     padding-top: 37px;
@@ -822,7 +831,7 @@ p {
   padding: 15px 0;
 }
 .contact-links .contact-list li .icon:before {
-  background: url("/assets/image/social-sprite.png") no-repeat;
+  background: url("/assets/image/site/sprite-social-aqua.png") no-repeat;
   background-position: 0 -3px;
   content: "";
   display: inline-block;
