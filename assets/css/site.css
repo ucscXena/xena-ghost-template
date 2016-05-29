@@ -396,11 +396,8 @@ input:focus {
 .page-post .section a {
   color: #4ecdc4;
 }
-.page-post .featured-image .section {
-  padding: 5px 0;
-}
-.page-post .featured-image .section img {
-  margin: 0 auto;
+.page-post .featured-image {
+  margin-top: 14px;
   width: 100%;
 }
 .page-post .contact-links .section {

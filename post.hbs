@@ -8,20 +8,12 @@
                     <h1>{{@blog.title}}</h1>
                     <p>{{@blog.description}}</p>
                 </div>
-                <div class="col-md-8">
+                <div class="col-xs-12 col-md-8 section">
+                    <h5>{{@title}}</h5>
                     {{#if image}}
-                        <div class="featured-image">
-                            <div class="col-xs-12 section">
-                                <img src="{{image}}"/>
-                            </div>
-                        </div>
+                        <img src="{{image}}" class="featured-image"/>
                     {{/if}}
-                    <div class="row">
-                        <div class="col-xs-12 section">
-                            <h5>{{@title}}</h5>
-                            {{content}}
-                        </div>
-                    </div>
+                    {{content}}
                 </div>
             </div>
         </div>
