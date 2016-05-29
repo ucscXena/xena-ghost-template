@@ -345,6 +345,10 @@ input {
  .page-post {
      .section {
          padding: 10px 15px;
+         &.with-border-top {
+             border-top: 2px solid fade(@xena-green-dark, 10%);
+             padding-top: 60px;
+         }
          h1 {
              color: @xena-aqua;
          }
@@ -360,7 +364,7 @@ input {
      }
      // Main post image
      .featured-image {
-         margin-top: 14px; // Match margin top of p
+         margin-top: 25px; // Match top of blog title
          width: 100%;
      }
      // Contact links

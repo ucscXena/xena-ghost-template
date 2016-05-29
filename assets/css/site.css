@@ -380,6 +380,10 @@ input:focus {
 .page-post .section {
   padding: 10px 15px;
 }
+.page-post .section.with-border-top {
+  border-top: 2px solid rgba(26, 83, 92, 0.1);
+  padding-top: 60px;
+}
 .page-post .section h1 {
   color: #4ecdc4;
 }
@@ -397,7 +401,7 @@ input:focus {
   color: #4ecdc4;
 }
 .page-post .featured-image {
-  margin-top: 14px;
+  margin-top: 25px;
   width: 100%;
 }
 .page-post .contact-links .section {
