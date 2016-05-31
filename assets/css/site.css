@@ -417,6 +417,9 @@ input:focus {
 .page-post .section a {
   color: #4ecdc4;
 }
+.page-post .section img {
+  max-width: 100%;
+}
 .page-post .featured-image {
   margin-top: 25px;
   width: 100%;
