@@ -34,3 +34,11 @@
 * Within the Xena theme directory, start the less watcher:
 
     `grunt pizza`
+
+
+## Creating the zip file to upload to ghost.io
+* Within the Xena theme directory, run:
+
+    `grunt dist`
+
+* This will create a file called `xena-ghost-theme.zip` in the current directory.
