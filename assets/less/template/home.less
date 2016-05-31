@@ -1,0 +1,105 @@
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for home template.
+ */
+
+.page-home {
+
+    // Figure-related styles. This is currently very specific to home template. May need to revisit and generalize.
+    figure {
+        margin-bottom: 85px;
+        text-align: center; // Center images on devices where image width is < 100%
+        &.last-child {
+            margin-bottom: 0;
+        }
+        img {
+            margin: 0 auto;
+            width: 90%;
+        }
+        .button {
+            display: none;
+        }
+        figcaption {
+            .font(2rem, 700);
+            margin: 25px 0 0;
+            text-align: center;
+        }
+    }
+}
+
+/**
+ * Small +
+ */
+@media screen and (min-width: @screen-sm-min) {
+
+    // Home page
+    .page-home {
+        figure {
+            img {
+                width: 60%; // Shrink for small devices where image is 100% width
+            }
+        }
+    }
+}
+
+/**
+ * Medium +
+ */
+@media screen and (min-width: @screen-md-min) {
+
+    // Local variables
+    @section-padding: 125px;
+
+    // Home page
+    .page-home {
+        // Shared...
+        .section {
+            padding-bottom: @section-padding; // Off the mocks - generalizing for reuse by all sections
+            padding-top: @section-padding; // Off the mocks - generalizing for reuse by all sections
+        }
+        .with-border-top {
+            padding-top: @section-padding; // Off the mocks, matching with section padding
+        }
+        figure {
+            margin-bottom: 0;
+            .hover {
+                &:before {
+                    content: "";
+                    height: 100%;
+                    position: absolute;
+                    opacity: 0;
+                    width: 100%;
+                    .transition(opacity 0.3s ease);
+                }
+                .button {
+                    display: block;
+                    left: 50%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 50%;
+                    .transform(translate(-50%, -50%));
+                    .transition(all 0.3s ease);
+                }
+                &:hover {
+                    &:before {
+                        opacity: 1;
+                    }
+                    .button {
+                        opacity: 1;
+                    }
+                }
+            }
+            .image-wrapper {
+                margin: 0 auto;
+                position: relative;
+                .button-white {
+                    min-width: 158px;
+                }
+            }
+            img {
+                width: 100%; // Maximize for medium +
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for graph component.
+ */
+
+.graph {
+    .section-yellow {
+        background: @xena-yellow;
+        color: @xena-green-dark;
+        figure {
+            .image-wrapper {
+                max-height: 229px;
+                max-width: 229px;
+                &:before {
+                    background-color: @xena-peach-transparent;
+                    .rounded(50%);
+                }
+            }
+            img {
+                background: @xena-yellow-light;
+                .rounded(50%);
+            }
+        }
+    }
+}

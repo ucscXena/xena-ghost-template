@@ -1,0 +1,147 @@
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for overview component.
+ */
+
+.overview {
+    .value-prop-description {
+        .font(2.8rem, 18px);
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .section {
+        color: @xena-white;
+        p {
+            .font(2rem, 700);
+            margin: 27px 0 0; // Line height + margin = 30px
+        }
+    }
+    .section-peach {
+        background: @xena-peach;
+        margin-top: -40%; // Scoot up Xena public/private image
+        padding-top: 48%;
+        padding-bottom: 58px; // No mocks - matching with padding top of public/private section, squashing for mobile
+    }
+    .public-private {
+        .section {
+            h5 {
+                font-style: italic;
+            }
+            h6 {
+                margin-top: 13px;
+            }
+            p {
+                font-weight: 300;
+            }
+            .button {
+                display: inline-block;
+                margin-top: 50px;
+            }
+        }
+    }
+    // Background colors specified for public/private data hub sections mobile (background is handled by
+    // after pseudo element on medium + devices to handle skew)
+    .section-public {
+        background-color: @xena-aqua
+    }
+    .section-private {
+        background-color: @xena-green-dark;
+    }
+}
+
+
+/**
+ * Medium +
+ */
+@media screen and (min-width: @screen-md-min) {
+
+    .overview {
+        .value-prop-description {
+            margin-bottom: 76px; // Line height of p + margin = 80px
+            p {
+                font-size: 2.6rem; // Off the mocks - squashing for medium only, 28px pushes "Xena Browser" section too far down
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+            // Position image
+            .public-private-image-container {
+                position: relative;
+                img {
+                    max-width: 90%; // Shrink for medium devices
+                    position: absolute; // Remove from normal flow
+                    right: -14px;
+                    top: 18px; // Image is positioned lower than corresponding text
+                }
+            }
+        }
+        .section-peach {
+            background: @xena-peach;
+            margin-top: 0; // Reset scoot up on mobile
+            padding-bottom: 122px;
+            padding-top: 107px; // Line height of h6 (18px) + padding top = 99px;
+        }
+        .public-private {
+            background-color: @xena-aqua;
+            position: relative;
+            &:after {
+                background-color: @xena-green-dark;
+                content: "";
+                display: block;
+                height: 100%;
+                right: 0;
+                position: absolute;
+                top: 0;
+                width: 61.11%; // Match back up with mocks for large devices (modified to larger width for medium devices)
+                transform-origin: bottom left;
+                .transform(skew(-21deg, 0deg));
+            }
+            .section {
+                // Customize section padding for public-private section
+                padding-bottom: 142px;
+                padding-top: 116px; // Line height of h6 + margin top = 110px
+                .button {
+                    margin-top: 50px;
+                }
+            }
+            .section-private {
+                .layer-above {
+                    // Layer content of private section above skewed after pseudo element of public-private
+                    position: relative;
+                    z-index: 100;
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Medium only
+ */
+@media screen and (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+    // Overview
+    .overview {
+        .public-private {
+            &:after {
+                .transform(skew(-11deg, 0deg)); // Off the mocks - skew further for narrow medium devices
+            }
+        }
+    }
+}
+
+/**
+ * Extra large
+ */
+@media screen and (min-width: @screen-xl-min) {
+
+    .overview {
+        .public-private {
+            &:after {
+                width: 56.5%; // Off the mocks - scooting split to the right for larger devices
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for analyze component.
+ */
+
+.analyze {
+    .section-peach {
+        background: @xena-peach;
+        color: @xena-white;
+        figure {
+            .image-wrapper {
+                max-height: 270px;
+                max-width: 270px;
+                &:before {
+                    background-color: @xena-yellow-transparent;
+                    .rounded(4px);
+                }
+            }
+            figcaption {
+                a {
+                    color: @xena-white;
+                }
+            }
+        }
+    }
+}

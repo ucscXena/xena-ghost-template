@@ -1,0 +1,94 @@
+/**
+ * UCSC Xena Web
+ *
+ * Global styles, shared across components, templates.
+ */
+
+// Links
+a {
+    color: @xena-green-dark;
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {
+        outline: 0;
+        text-decoration: none;
+    }
+}
+
+// Inputs
+input {
+    &:focus {
+        outline:0;
+    }
+}
+
+/**
+ * Mixins
+ */
+.rounded(@radius:4px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+/**
+ * Local variables
+ */
+@section-padding: 71px;
+
+/**
+ * Local variables
+ */
+@section-padding: 71px;
+
+/**
+ * A section is a distinct area in a template, that encapsulates idea, topic, area of discussion etc.
+ */
+.section {
+    padding-bottom: @section-padding; // Off the mocks - generalizing for reuse by all sections
+    padding-top: @section-padding; // Off the mocks - generalizing for reuse by all sections
+    // Set up standard for h6 "subtitle" inside sections
+    h6 {
+        &.subtitle {
+            font-style: italic;
+            margin-bottom: 60px;
+        }
+    }
+    // Adds border to bottom of content inside section
+    // TODO revisit - pull base styles out for each home page section, refactor this to mixin, invoke from page-home selector of generalized section styles
+    .with-border-top {
+        border-top: 4px solid @xena-grey;
+        padding-top: @section-padding; // Off the mocks, matching with section padding
+    }
+    // Adds border to top of content inside section
+    // TODO revisit - as above with matching with-border-top class
+    .with-border-bottom {
+        border-bottom: 4px solid @xena-grey;
+        padding-bottom: @section-padding; // Off the mocks, matching with section padding
+    }
+}
+
+/**
+ * Medium +
+ */
+@media screen and (min-width: @screen-md-min) {
+    // Hide public/private image overhang on right hand side and skewed background in home page public/private
+    // section. (See also http://stackoverflow.com/a/18411774)
+    html, body {
+        overflow-x: hidden;
+    }
+}
+
+/**
+ * Large +
+ */
+@media screen and (min-width: @screen-lg-min) {
+    // Override Bootstrap to snap at large screens (ie change behaviour from fluid to static)
+    .container-fluid {
+        margin-left: auto;
+        margin-right: auto;
+        width: @screen-lg-min;
+    }
+}

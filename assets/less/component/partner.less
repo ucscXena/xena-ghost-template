@@ -1,0 +1,144 @@
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for partner component.
+ */
+
+.partner {
+    .partner-cell {
+        margin-bottom: 40px;
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+    .partner-first {
+        .logo-nci, .logo-nci-ga, .logo-nci-itcr {
+            height: 29px; // Must be 29px to shrink NIC logo to fit extra, extra small devices
+        }
+    }
+    .partner-second {
+        .logo-treehouse {
+            height: 70px;
+        }
+        .logo-pcawg {
+            height: 70px;
+        }
+        .logo-biojs {
+            height: 55px;
+        }
+        .logo-nih-bd2k {
+            height: 60px;
+        }
+        .logo-global-alliance {
+            height: 67px;
+        }
+    }
+    .partner-third {
+        .partner-cell {
+            margin-bottom: 0;
+        }
+        .logo-ucsc-gi {
+            height: 50px;
+        }
+    }
+}
+
+/**
+ * Medium +
+ */
+@media screen and (min-width: @screen-md-min) {
+
+    .partner {
+        .partner-table {
+            display: table;
+            border-collapse: collapse;
+            width: 100%;
+            & + .partner-table {
+                margin-top: 60px;
+            }
+            .partner-row {
+                display: table-row;
+                .partner-cell {
+                    display: table-cell;
+                    vertical-align: middle;
+                    &:first-child {
+                        &:last-child {
+                            text-align: center;
+                        }
+                    }
+                    &:not(:first-child):not(:last-child) {
+                        text-align: center;
+                    }
+                    &:last-child {
+                        text-align: right;
+                    }
+
+                }
+                &.partner-first {
+                    height: 30px;
+                }
+                &.partner-second {
+                    .logo-treehouse {
+                        height: 60px;
+                    }
+                    .logo-pcawg {
+                        height: 60px;
+                    }
+                    .logo-biojs {
+                        height: 40px;
+                    }
+                    .logo-nih-bd2k {
+                        height: 48px;
+                    }
+                    .logo-global-alliance {
+                        height: 40px;
+                    }
+                }
+                &.partner-third {
+                    .logo-ucsc-gi {
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Extra large
+ */
+@media screen and (min-width: @screen-xl-min) {
+
+    .partner {
+        .partner-table {
+            .partner-row {
+                &.partner-first {
+                    height: 38px;
+                }
+                &.partner-second {
+                    .logo-treehouse {
+                        height: 72px;
+                    }
+                    .logo-pcawg {
+                        height: 72px;
+                    }
+                    .logo-biojs {
+                        height: 52px;
+                    }
+                    .logo-nih-bd2k {
+                        height: 60px;
+                    }
+                    .logo-global-alliance {
+                        height: 52px;
+                    }
+                }
+                &.partner-third {
+                    .logo-ucsc-gi {
+                        height: 72px;
+                    }
+                }
+            }
+        }
+    }
+}

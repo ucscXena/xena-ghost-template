@@ -81,645 +81,6 @@
 /**
  * UCSC Xena Web
  *
- * Implementation-specific rules.
- */
-a {
-  color: #1a535c;
-}
-a:hover {
-  text-decoration: none;
-}
-input:focus {
-  outline: 0;
-}
-/**
- * Mixins
- */
-/**
- * Local variables
- */
-/**
- * Local variables
- */
-/**
- * Global styles
- */
-.section {
-  padding-bottom: 71px;
-  padding-top: 71px;
-}
-.section h6.subtitle {
-  font-style: italic;
-  margin-bottom: 60px;
-}
-.section .with-border-top {
-  border-top: 4px solid #d8d8d8;
-  padding-top: 71px;
-}
-.section .with-border-bottom {
-  border-bottom: 4px solid #d8d8d8;
-  padding-bottom: 71px;
-}
-/**
- * Home page
- */
-.page-home figure {
-  margin-bottom: 85px;
-  text-align: center;
-}
-.page-home figure.last-child {
-  margin-bottom: 0;
-}
-.page-home figure img {
-  margin: 0 auto;
-  width: 90%;
-}
-.page-home figure .button {
-  display: none;
-}
-.page-home figure figcaption {
-  font-family: "San Francisco", sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  margin: 25px 0 0;
-  text-align: center;
-}
-.page-home .jumbotron {
-  padding-top: 16px;
-  padding-bottom: 30px;
-  text-align: center;
-}
-.page-home .jumbotron h1 {
-  color: #4ecdc4;
-  font-family: "San Francisco", sans-serif;
-  font-size: 10rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 80px;
-  margin-bottom: 15px;
-}
-.page-home .jumbotron h3 {
-  font-family: "San Francisco", sans-serif;
-  font-size: 2.4rem;
-  font-style: italic;
-  font-weight: 600;
-}
-.page-home .overview .value-prop-description {
-  font-family: "San Francisco", sans-serif;
-  font-size: 2.8rem;
-  font-style: normal;
-  font-weight: 18px;
-}
-.page-home .overview .value-prop-description img {
-  display: block;
-  width: 100%;
-}
-.page-home .overview .section {
-  color: #ffffff;
-}
-.page-home .overview .section p {
-  font-family: "San Francisco", sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  margin: 27px 0 0;
-}
-.page-home .overview .section-peach {
-  background: #ff6b6b;
-  margin-top: -40%;
-  padding-top: 48%;
-  padding-bottom: 58px;
-}
-.page-home .overview .public-private .section h5 {
-  font-style: italic;
-}
-.page-home .overview .public-private .section h6 {
-  margin-top: 13px;
-}
-.page-home .overview .public-private .section p {
-  font-weight: 300;
-}
-.page-home .overview .public-private .section .button {
-  margin-top: 50px;
-}
-.page-home .overview .section-public {
-  background-color: #4ecdc4;
-}
-.page-home .overview .section-private {
-  background-color: #1a535c;
-}
-.page-home .discover .row {
-  margin-bottom: 52px;
-}
-.page-home .discover .row:first-child,
-.page-home .discover .row:last-child {
-  margin-bottom: 0;
-}
-.page-home .analyze .section-peach {
-  background: #ff6b6b;
-  color: #ffffff;
-}
-.page-home .analyze .section-peach figure .image-wrapper {
-  max-height: 270px;
-  max-width: 270px;
-}
-.page-home .analyze .section-peach figure .image-wrapper:before {
-  background-color: rgba(255, 237, 153, 0.89);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-.page-home .analyze .section-peach figure figcaption a {
-  color: #ffffff;
-}
-.page-home .graph .section-yellow {
-  background: #ffe66d;
-  color: #1a535c;
-}
-.page-home .graph .section-yellow figure .image-wrapper {
-  max-height: 229px;
-  max-width: 229px;
-}
-.page-home .graph .section-yellow figure .image-wrapper:before {
-  background-color: rgba(255, 107, 107, 0.89);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
-.page-home .graph .section-yellow figure img {
-  background: #ffed99;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-}
-.page-home .mailing-list h6 {
-  font-weight: 300;
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form {
-  padding: 0;
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group {
-  margin-top: 40px;
-  padding-bottom: 0;
-  width: 100%;
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group .form-control {
-  border-radius: 4px;
-  border: solid 4px #d8d8d8;
-  color: #1a535c;
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0;
-  padding: 10px;
-  text-indent: 0;
-  width: 100%;
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group .form-control.mce_inline_error {
-  border-color: #ff6b6b;
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group ::-webkit-input-placeholder {
-  color: rgba(26, 83, 92, 0.57);
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group ::-moz-placeholder {
-  color: rgba(26, 83, 92, 0.57);
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group :-ms-input-placeholder {
-  color: rgba(26, 83, 92, 0.57);
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group div.mce_inline_error {
-  display: block;
-  font-size: 1.8rem;
-  padding: 5px 5px;
-  position: absolute;
-  text-align: left;
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group div#mce-responses {
-  margin: 0;
-  text-align: left;
-  top: 0;
-  width: 100%;
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group div#mce-responses #mce-success-response,
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group div#mce-responses div#mce-error-response {
-  font-size: 1.8rem;
-  font-weight: normal;
-  margin: 0;
-  padding: 5px 5px;
-  top: 0;
-  width: 100%;
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group div#mce-responses #mce-success-response {
-  color: #1a535c;
-  position: absolute;
-  top: 52px;
-}
-.page-home .mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group .button {
-  background-color: #ff6b6b;
-  font-size: 2rem;
-  font-weight: 700;
-  height: 48px;
-  line-height: 1;
-  margin: 0;
-  padding: 13px 20px;
-}
-.page-home .partner .partner-cell {
-  margin-bottom: 40px;
-}
-.page-home .partner .partner-cell img {
-  display: block;
-  margin: auto;
-}
-.page-home .partner .partner-first .logo-nci,
-.page-home .partner .partner-first .logo-nci-ga,
-.page-home .partner .partner-first .logo-nci-itcr {
-  height: 29px;
-}
-.page-home .partner .partner-second .logo-treehouse {
-  height: 70px;
-}
-.page-home .partner .partner-second .logo-pcawg {
-  height: 70px;
-}
-.page-home .partner .partner-second .logo-biojs {
-  height: 55px;
-}
-.page-home .partner .partner-second .logo-nih-bd2k {
-  height: 60px;
-}
-.page-home .partner .partner-second .logo-global-alliance {
-  height: 67px;
-}
-.page-home .partner .partner-third .partner-cell {
-  margin-bottom: 0;
-}
-.page-home .partner .partner-third .logo-ucsc-gi {
-  height: 50px;
-}
-.page-home .forum .section {
-  padding-bottom: 0;
-  padding-top: 0;
-}
-.page-home .forum h6 {
-  font-weight: 300;
-}
-.page-home .forum h6 a {
-  display: inline-block;
-  font-size: 1.2rem;
-  margin-left: 40px;
-}
-.page-home .forum .button-green-dark {
-  display: block;
-  margin: 60px 0;
-}
-.page-home .forum .forum-group {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.page-home .forum .forum-group li {
-  margin: 40px 0;
-}
-.page-home .forum .forum-group li:last-child {
-  margin-bottom: 0;
-}
-.page-home .forum .forum-group li a {
-  display: block;
-  font-size: 2rem;
-}
-/**
- * Backpage
- */
-.page-post .section {
-  padding: 10px 15px;
-}
-.page-post .section.with-border-top {
-  border-top: 2px solid rgba(26, 83, 92, 0.1);
-  padding-top: 60px;
-}
-.page-post .section h1 {
-  color: #4ecdc4;
-}
-.page-post .section h2,
-.page-post .section h3,
-.page-post .section h4,
-.page-post .section h5,
-.page-post .section h6 {
-  color: #ff6b6b;
-}
-.page-post .section p {
-  line-height: 2.1em;
-}
-.page-post .section a {
-  color: #4ecdc4;
-}
-.page-post .featured-image {
-  margin-top: 25px;
-  width: 100%;
-}
-.page-post .contact-links .section {
-  padding: 10px 0px;
-}
-.page-post .contact-links .section .contact-list {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-}
-.page-post .contact-links .section .contact-list li {
-  display: block;
-  text-align: left;
-}
-.page-post .contact-links .section .contact-list li a {
-  color: rgba(26, 83, 92, 0.57);
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 700;
-  padding: 15px 0;
-}
-.page-post .contact-links .section .contact-list li .icon:before {
-  background: url("/assets/image/site/sprite-social-aqua.png") no-repeat;
-}
-.page-post .contact-links .section .contact-list li .icon-twitter:before {
-  background-position: -58px;
-}
-.page-post .contact-links .section .contact-list li .icon-mail:before {
-  background-position: -31px;
-}
-.page-post .contact-links .section .contact-list li .icon-github:before {
-  background-position: -3px;
-}
-.page-post .contact-links .section .with-border-bottom {
-  border-bottom: 0px;
-  padding-bottom: 40px;
-}
-.page-post .contact-links .section .with-border-top {
-  border-top: 4px solid #f7fff7;
-  padding-top: 40px;
-}
-/**
- * Footer
- */
-.footer .section-green-light {
-  background: #f7fff7;
-}
-.footer .section-green-light p {
-  font-family: "San Francisco", sans-serif;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 700;
-}
-/**
- * Media Queries
- */
-/**
- * Small +
- */
-@media screen and (min-width: 768px) {
-  .page-home figure img {
-    width: 60%;
-  }
-}
-/**
- * Medium +
- */
-@media screen and (min-width: 992px) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
-  .page-home .section {
-    padding-bottom: 125px;
-    padding-top: 125px;
-  }
-  .page-home .with-border-top {
-    padding-top: 125px;
-  }
-  .page-home figure {
-    margin-bottom: 0;
-  }
-  .page-home figure .hover:before {
-    content: "";
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    -webkit-transition: opacity 0.3s ease;
-    -moz-transition: opacity 0.3s ease;
-    -ms-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
-  }
-  .page-home figure .hover .button {
-    display: block;
-    left: 50%;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-  .page-home figure .hover:hover:before {
-    opacity: 1;
-  }
-  .page-home figure .hover:hover .button {
-    opacity: 1;
-  }
-  .page-home figure .image-wrapper {
-    margin: 0 auto;
-    position: relative;
-  }
-  .page-home figure .image-wrapper .button-white {
-    min-width: 158px;
-  }
-  .page-home figure img {
-    width: 100%;
-  }
-  .page-home .jumbotron {
-    padding-top: 37px;
-    padding-bottom: 65px;
-    text-align: left;
-  }
-  .page-home .jumbotron h1 {
-    font-size: 15.5rem;
-    line-height: 185px;
-  }
-  .page-home .jumbotron h3 {
-    font-size: 4.2rem;
-    line-height: 18px;
-    margin-top: -12px;
-  }
-  .page-home .overview .value-prop-description {
-    margin-bottom: 76px;
-  }
-  .page-home .overview .value-prop-description p {
-    font-size: 2.6rem;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-  .page-home .overview .value-prop-description .public-private-image-container {
-    position: relative;
-  }
-  .page-home .overview .value-prop-description .public-private-image-container img {
-    max-width: 90%;
-    position: absolute;
-    right: -14px;
-    top: 18px;
-  }
-  .page-home .overview .section-peach {
-    background: #ff6b6b;
-    margin-top: 0;
-    padding-bottom: 122px;
-    padding-top: 107px;
-  }
-  .page-home .overview .public-private {
-    background-color: #4ecdc4;
-    position: relative;
-  }
-  .page-home .overview .public-private:after {
-    background-color: #1a535c;
-    content: "";
-    display: block;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    top: 0;
-    width: 61.11%;
-    transform-origin: bottom left;
-    -webkit-transform: skew(-21deg, 0deg);
-    -moz-transform: skew(-21deg, 0deg);
-    -ms-transform: skew(-21deg, 0deg);
-    -o-transform: skew(-21deg, 0deg);
-    transform: skew(-21deg, 0deg);
-  }
-  .page-home .overview .public-private .section {
-    padding-bottom: 142px;
-    padding-top: 116px;
-  }
-  .page-home .overview .public-private .section .button {
-    margin-top: 50px;
-  }
-  .page-home .overview .public-private .section-private .layer-above {
-    position: relative;
-    z-index: 100;
-  }
-  .page-home .discover .button {
-    float: right;
-  }
-  .page-home .partner .partner-table {
-    display: table;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  .page-home .partner .partner-table + .partner-table {
-    margin-top: 60px;
-  }
-  .page-home .partner .partner-table .partner-row {
-    display: table-row;
-  }
-  .page-home .partner .partner-table .partner-row .partner-cell {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .page-home .partner .partner-table .partner-row .partner-cell:first-child:last-child {
-    text-align: center;
-  }
-  .page-home .partner .partner-table .partner-row .partner-cell:not(:first-child):not(:last-child) {
-    text-align: center;
-  }
-  .page-home .partner .partner-table .partner-row .partner-cell:last-child {
-    text-align: right;
-  }
-  .page-home .partner .partner-table .partner-row.partner-first {
-    height: 30px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-second .logo-treehouse {
-    height: 60px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-second .logo-pcawg {
-    height: 60px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-second .logo-biojs {
-    height: 40px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-second .logo-nih-bd2k {
-    height: 48px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-second .logo-global-alliance {
-    height: 40px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-third .logo-ucsc-gi {
-    height: 60px;
-  }
-  .page-home .forum .button-green-dark {
-    margin: 60px auto 0;
-  }
-}
-/**
- * Medium only
- */
-@media screen and (min-width: 992px) and (max-width: 1439px) {
-  .page-home .overview .public-private:after {
-    -webkit-transform: skew(-11deg, 0deg);
-    -moz-transform: skew(-11deg, 0deg);
-    -ms-transform: skew(-11deg, 0deg);
-    -o-transform: skew(-11deg, 0deg);
-    transform: skew(-11deg, 0deg);
-  }
-}
-/**
- * Large +
- */
-@media screen and (min-width: 1440px) {
-  .container-fluid {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1440px;
-  }
-}
-/**
- * Extra large
- */
-@media screen and (min-width: 1921px) {
-  .page-home .overview .public-private:after {
-    width: 56.5%;
-  }
-  .page-home .partner .partner-table .partner-row.partner-first {
-    height: 38px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-second .logo-treehouse {
-    height: 72px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-second .logo-pcawg {
-    height: 72px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-second .logo-biojs {
-    height: 52px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-second .logo-nih-bd2k {
-    height: 60px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-second .logo-global-alliance {
-    height: 52px;
-  }
-  .page-home .partner .partner-table .partner-row.partner-third .logo-ucsc-gi {
-    height: 72px;
-  }
-}
-/**
- * UCSC Xena Web
- *
  * Font face rules for specifying custom fonts.
  */
 @font-face {
@@ -823,6 +184,114 @@ p {
   font-style: italic;
 }
 /**
+ * UCSC Xena Web
+ *
+ * Global styles, shared across components, templates.
+ */
+a {
+  color: #1a535c;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+input:focus {
+  outline: 0;
+}
+/**
+ * Mixins
+ */
+/**
+ * Local variables
+ */
+/**
+ * Local variables
+ */
+/**
+ * A section is a distinct area in a template, that encapsulates idea, topic, area of discussion etc.
+ */
+.section {
+  padding-bottom: 71px;
+  padding-top: 71px;
+}
+.section h6.subtitle {
+  font-style: italic;
+  margin-bottom: 60px;
+}
+.section .with-border-top {
+  border-top: 4px solid #d8d8d8;
+  padding-top: 71px;
+}
+.section .with-border-bottom {
+  border-bottom: 4px solid #d8d8d8;
+  padding-bottom: 71px;
+}
+/**
+ * Medium +
+ */
+@media screen and (min-width: 992px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+/**
+ * Large +
+ */
+@media screen and (min-width: 1440px) {
+  .container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1440px;
+  }
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for analyze component.
+ */
+.analyze .section-peach {
+  background: #ff6b6b;
+  color: #ffffff;
+}
+.analyze .section-peach figure .image-wrapper {
+  max-height: 270px;
+  max-width: 270px;
+}
+.analyze .section-peach figure .image-wrapper:before {
+  background-color: rgba(255, 237, 153, 0.89);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.analyze .section-peach figure figcaption a {
+  color: #ffffff;
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for discover component.
+ */
+.discover .row {
+  margin-bottom: 52px;
+}
+.discover .row:first-child,
+.discover .row:last-child {
+  margin-bottom: 0;
+}
+/**
+ * Medium +
+ */
+@media screen and (min-width: 992px) {
+  .discover .button {
+    float: right;
+  }
+}
+/**
  * UCSC Xena.
  *
  * Responsive style definitions for contact links component.
@@ -900,6 +369,214 @@ p {
   .contact-links .contact-list li a .icon {
     margin-right: 22px;
   }
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for footer component.
+ */
+.footer .section-green-light {
+  background: #f7fff7;
+}
+.footer .section-green-light p {
+  font-family: "San Francisco", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for forum component.
+ */
+.forum .section {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.forum h6 {
+  font-weight: 300;
+}
+.forum h6 a {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-left: 40px;
+}
+.forum .button-green-dark {
+  display: block;
+  margin: 60px 0;
+}
+.forum .forum-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.forum .forum-group li {
+  margin: 40px 0;
+}
+.forum .forum-group li:last-child {
+  margin-bottom: 0;
+}
+.forum .forum-group li a {
+  display: block;
+  font-size: 2rem;
+}
+/**
+ * Medium +
+ */
+@media screen and (min-width: 992px) {
+  .forum .button-green-dark {
+    margin: 60px auto 0;
+  }
+  .forum .button-green-dark:focus {
+    color: #ffffff;
+  }
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for graph component.
+ */
+.graph .section-yellow {
+  background: #ffe66d;
+  color: #1a535c;
+}
+.graph .section-yellow figure .image-wrapper {
+  max-height: 229px;
+  max-width: 229px;
+}
+.graph .section-yellow figure .image-wrapper:before {
+  background-color: rgba(255, 107, 107, 0.89);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.graph .section-yellow figure img {
+  background: #ffed99;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for jumbotron component.
+ */
+.jumbotron {
+  padding-top: 16px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.jumbotron h1 {
+  color: #4ecdc4;
+  font-family: "San Francisco", sans-serif;
+  font-size: 10rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 80px;
+  margin-bottom: 15px;
+}
+.jumbotron h3 {
+  font-family: "San Francisco", sans-serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 600;
+}
+/**
+ * Medium +
+ */
+@media screen and (min-width: 992px) {
+  .jumbotron {
+    padding-top: 37px;
+    padding-bottom: 65px;
+    text-align: left;
+  }
+  .jumbotron h1 {
+    font-size: 15.5rem;
+    line-height: 185px;
+  }
+  .jumbotron h3 {
+    font-size: 4.2rem;
+    line-height: 18px;
+    margin-top: -12px;
+  }
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for mailing list component.
+ */
+.mailing-list h6 {
+  font-weight: 300;
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form {
+  padding: 0;
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group {
+  margin-top: 40px;
+  padding-bottom: 0;
+  width: 100%;
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group .form-control {
+  border-radius: 4px;
+  border: solid 4px #d8d8d8;
+  color: #1a535c;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 10px;
+  text-indent: 0;
+  width: 100%;
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group .form-control.mce_inline_error {
+  border-color: #ff6b6b;
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group ::-webkit-input-placeholder {
+  color: rgba(26, 83, 92, 0.57);
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group ::-moz-placeholder {
+  color: rgba(26, 83, 92, 0.57);
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group :-ms-input-placeholder {
+  color: rgba(26, 83, 92, 0.57);
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group div.mce_inline_error {
+  display: block;
+  font-size: 1.8rem;
+  padding: 5px 5px;
+  position: absolute;
+  text-align: left;
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group div#mce-responses {
+  margin: 0;
+  text-align: left;
+  top: 0;
+  width: 100%;
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group div#mce-responses #mce-success-response,
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group div#mce-responses div#mce-error-response {
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 5px 5px;
+  top: 0;
+  width: 100%;
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group div#mce-responses #mce-success-response {
+  color: #1a535c;
+  position: absolute;
+  top: 52px;
+}
+.mailing-list #mc_embed_signup #mc-embedded-subscribe-form .form-group .button {
+  background-color: #ff6b6b;
+  font-size: 2rem;
+  font-weight: 700;
+  height: 48px;
+  line-height: 1;
+  margin: 0;
+  padding: 13px 20px;
 }
 /**
  * UCSC Xena Web
@@ -1078,4 +755,416 @@ p {
   .navbar .navbar-nav li {
     margin-left: 75px;
   }
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for overview component.
+ */
+.overview .value-prop-description {
+  font-family: "San Francisco", sans-serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 18px;
+}
+.overview .value-prop-description img {
+  display: block;
+  width: 100%;
+}
+.overview .section {
+  color: #ffffff;
+}
+.overview .section p {
+  font-family: "San Francisco", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  margin: 27px 0 0;
+}
+.overview .section-peach {
+  background: #ff6b6b;
+  margin-top: -40%;
+  padding-top: 48%;
+  padding-bottom: 58px;
+}
+.overview .public-private .section h5 {
+  font-style: italic;
+}
+.overview .public-private .section h6 {
+  margin-top: 13px;
+}
+.overview .public-private .section p {
+  font-weight: 300;
+}
+.overview .public-private .section .button {
+  display: inline-block;
+  margin-top: 50px;
+}
+.overview .section-public {
+  background-color: #4ecdc4;
+}
+.overview .section-private {
+  background-color: #1a535c;
+}
+/**
+ * Medium +
+ */
+@media screen and (min-width: 992px) {
+  .overview .value-prop-description {
+    margin-bottom: 76px;
+  }
+  .overview .value-prop-description p {
+    font-size: 2.6rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .overview .value-prop-description .public-private-image-container {
+    position: relative;
+  }
+  .overview .value-prop-description .public-private-image-container img {
+    max-width: 90%;
+    position: absolute;
+    right: -14px;
+    top: 18px;
+  }
+  .overview .section-peach {
+    background: #ff6b6b;
+    margin-top: 0;
+    padding-bottom: 122px;
+    padding-top: 107px;
+  }
+  .overview .public-private {
+    background-color: #4ecdc4;
+    position: relative;
+  }
+  .overview .public-private:after {
+    background-color: #1a535c;
+    content: "";
+    display: block;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 61.11%;
+    transform-origin: bottom left;
+    -webkit-transform: skew(-21deg, 0deg);
+    -moz-transform: skew(-21deg, 0deg);
+    -ms-transform: skew(-21deg, 0deg);
+    -o-transform: skew(-21deg, 0deg);
+    transform: skew(-21deg, 0deg);
+  }
+  .overview .public-private .section {
+    padding-bottom: 142px;
+    padding-top: 116px;
+  }
+  .overview .public-private .section .button {
+    margin-top: 50px;
+  }
+  .overview .public-private .section-private .layer-above {
+    position: relative;
+    z-index: 100;
+  }
+}
+/**
+ * Medium only
+ */
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+  .overview .public-private:after {
+    -webkit-transform: skew(-11deg, 0deg);
+    -moz-transform: skew(-11deg, 0deg);
+    -ms-transform: skew(-11deg, 0deg);
+    -o-transform: skew(-11deg, 0deg);
+    transform: skew(-11deg, 0deg);
+  }
+}
+/**
+ * Extra large
+ */
+@media screen and (min-width: 1921px) {
+  .overview .public-private:after {
+    width: 56.5%;
+  }
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for partner component.
+ */
+.partner .partner-cell {
+  margin-bottom: 40px;
+}
+.partner .partner-cell img {
+  display: block;
+  margin: auto;
+}
+.partner .partner-first .logo-nci,
+.partner .partner-first .logo-nci-ga,
+.partner .partner-first .logo-nci-itcr {
+  height: 29px;
+}
+.partner .partner-second .logo-treehouse {
+  height: 70px;
+}
+.partner .partner-second .logo-pcawg {
+  height: 70px;
+}
+.partner .partner-second .logo-biojs {
+  height: 55px;
+}
+.partner .partner-second .logo-nih-bd2k {
+  height: 60px;
+}
+.partner .partner-second .logo-global-alliance {
+  height: 67px;
+}
+.partner .partner-third .partner-cell {
+  margin-bottom: 0;
+}
+.partner .partner-third .logo-ucsc-gi {
+  height: 50px;
+}
+/**
+ * Medium +
+ */
+@media screen and (min-width: 992px) {
+  .partner .partner-table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .partner .partner-table + .partner-table {
+    margin-top: 60px;
+  }
+  .partner .partner-table .partner-row {
+    display: table-row;
+  }
+  .partner .partner-table .partner-row .partner-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .partner .partner-table .partner-row .partner-cell:first-child:last-child {
+    text-align: center;
+  }
+  .partner .partner-table .partner-row .partner-cell:not(:first-child):not(:last-child) {
+    text-align: center;
+  }
+  .partner .partner-table .partner-row .partner-cell:last-child {
+    text-align: right;
+  }
+  .partner .partner-table .partner-row.partner-first {
+    height: 30px;
+  }
+  .partner .partner-table .partner-row.partner-second .logo-treehouse {
+    height: 60px;
+  }
+  .partner .partner-table .partner-row.partner-second .logo-pcawg {
+    height: 60px;
+  }
+  .partner .partner-table .partner-row.partner-second .logo-biojs {
+    height: 40px;
+  }
+  .partner .partner-table .partner-row.partner-second .logo-nih-bd2k {
+    height: 48px;
+  }
+  .partner .partner-table .partner-row.partner-second .logo-global-alliance {
+    height: 40px;
+  }
+  .partner .partner-table .partner-row.partner-third .logo-ucsc-gi {
+    height: 60px;
+  }
+}
+/**
+ * Extra large
+ */
+@media screen and (min-width: 1921px) {
+  .partner .partner-table .partner-row.partner-first {
+    height: 38px;
+  }
+  .partner .partner-table .partner-row.partner-second .logo-treehouse {
+    height: 72px;
+  }
+  .partner .partner-table .partner-row.partner-second .logo-pcawg {
+    height: 72px;
+  }
+  .partner .partner-table .partner-row.partner-second .logo-biojs {
+    height: 52px;
+  }
+  .partner .partner-table .partner-row.partner-second .logo-nih-bd2k {
+    height: 60px;
+  }
+  .partner .partner-table .partner-row.partner-second .logo-global-alliance {
+    height: 52px;
+  }
+  .partner .partner-table .partner-row.partner-third .logo-ucsc-gi {
+    height: 72px;
+  }
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for home template.
+ */
+.page-home figure {
+  margin-bottom: 85px;
+  text-align: center;
+}
+.page-home figure.last-child {
+  margin-bottom: 0;
+}
+.page-home figure img {
+  margin: 0 auto;
+  width: 90%;
+}
+.page-home figure .button {
+  display: none;
+}
+.page-home figure figcaption {
+  font-family: "San Francisco", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  margin: 25px 0 0;
+  text-align: center;
+}
+/**
+ * Small +
+ */
+@media screen and (min-width: 768px) {
+  .page-home figure img {
+    width: 60%;
+  }
+}
+/**
+ * Medium +
+ */
+@media screen and (min-width: 992px) {
+  .page-home .section {
+    padding-bottom: 125px;
+    padding-top: 125px;
+  }
+  .page-home .with-border-top {
+    padding-top: 125px;
+  }
+  .page-home figure {
+    margin-bottom: 0;
+  }
+  .page-home figure .hover:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  .page-home figure .hover .button {
+    display: block;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .page-home figure .hover:hover:before {
+    opacity: 1;
+  }
+  .page-home figure .hover:hover .button {
+    opacity: 1;
+  }
+  .page-home figure .image-wrapper {
+    margin: 0 auto;
+    position: relative;
+  }
+  .page-home figure .image-wrapper .button-white {
+    min-width: 158px;
+  }
+  .page-home figure img {
+    width: 100%;
+  }
+}
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for post template.
+ */
+.page-post .section {
+  padding: 10px 15px;
+}
+.page-post .section.with-border-top {
+  border-top: 2px solid rgba(26, 83, 92, 0.1);
+  padding-top: 60px;
+}
+.page-post .section h1 {
+  color: #4ecdc4;
+}
+.page-post .section h2,
+.page-post .section h3,
+.page-post .section h4,
+.page-post .section h5,
+.page-post .section h6 {
+  color: #ff6b6b;
+}
+.page-post .section p {
+  line-height: 2.1em;
+}
+.page-post .section a {
+  color: #4ecdc4;
+}
+.page-post .section img {
+  max-width: 100%;
+}
+.page-post .featured-image {
+  margin-top: 25px;
+  width: 100%;
+}
+.page-post .contact-links .section {
+  padding: 10px 0px;
+}
+.page-post .contact-links .section .contact-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.page-post .contact-links .section .contact-list li {
+  display: block;
+  text-align: left;
+}
+.page-post .contact-links .section .contact-list li a {
+  color: rgba(26, 83, 92, 0.57);
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 15px 0;
+}
+.page-post .contact-links .section .contact-list li .icon:before {
+  background: url("/assets/image/site/sprite-social-aqua.png") no-repeat;
+}
+.page-post .contact-links .section .contact-list li .icon-twitter:before {
+  background-position: -58px;
+}
+.page-post .contact-links .section .contact-list li .icon-mail:before {
+  background-position: -31px;
+}
+.page-post .contact-links .section .contact-list li .icon-github:before {
+  background-position: -3px;
+}
+.page-post .contact-links .section .with-border-bottom {
+  border-bottom: 0px;
+  padding-bottom: 40px;
+}
+.page-post .contact-links .section .with-border-top {
+  border-top: 4px solid #f7fff7;
+  padding-top: 40px;
 }

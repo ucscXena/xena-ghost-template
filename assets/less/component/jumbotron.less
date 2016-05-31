@@ -1,0 +1,48 @@
+/**
+ * UCSC Xena.
+ *
+ * Responsive style definitions for jumbotron component.
+ */
+
+.jumbotron {
+    // Padding of jumbotron calculated as:
+    // Top: padding top + line height of h1 + margin bottom of header = 52px
+    // Bottom: padding bottom + height height of h3 = 34px
+    padding-top: 16px;
+    padding-bottom: 30px;
+    text-align: center;
+    h1 {
+        color: @xena-aqua;
+        .font(10rem, 800);
+        line-height: 80px;
+        margin-bottom: 15px; // Line height of h1 and h3 + margin = 25px
+    }
+    h3 {
+        .font(2.4rem, 600, italic);
+    }
+}
+
+
+/**
+ * Medium +
+ */
+@media screen and (min-width: @screen-md-min) {
+
+    .jumbotron {
+        // Padding of jumbotron calculated as:
+        // Top: padding top + line height of h1 + margin bottom of header = 109px
+        // Bottom: padding bottom + height height of h3 = 60px
+        padding-top: 37px;
+        padding-bottom: 65px;
+        text-align: left;
+        h1 {
+            font-size: 15.5rem;
+            line-height: 185px;
+        }
+        h3 {
+            font-size: 4.2rem;
+            line-height: 18px;
+            margin-top: -12px; // Line height of h1 and h3 + margin = 15px
+        }
+    }
+}
