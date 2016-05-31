@@ -48,6 +48,7 @@
   background: #ff6b6b;
   border: none;
   color: #ffffff;
+  display: inline-block;
   font-family: "San Francisco", sans-serif;
   font-size: 2rem;
   font-style: normal;
@@ -61,10 +62,16 @@
   -moz-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-appearance: none;
 }
 .button:hover {
-  color: #ffffff;
+  color: #1a535c;
+  background-color: #ffe66d;
 }
 .button.button-green-dark {
   background: #1a535c;
@@ -127,6 +134,14 @@
  * work in conjunction with Bootstrap's grid functionality.
  *
  * A comprehensive device size breakdown can be found at http://mydevice.io/devices/.
+ */
+/**
+ * UCSC Xena Web
+ *
+ * Shared mixins.
+ */
+/**
+ * Mixins
  */
 /**
  * UCSC Xena Web
@@ -202,34 +217,6 @@ input:focus {
   outline: 0;
 }
 /**
- * Mixins
- */
-/**
- * Local variables
- */
-/**
- * Local variables
- */
-/**
- * A section is a distinct area in a template, that encapsulates idea, topic, area of discussion etc.
- */
-.section {
-  padding-bottom: 71px;
-  padding-top: 71px;
-}
-.section h6.subtitle {
-  font-style: italic;
-  margin-bottom: 60px;
-}
-.section .with-border-top {
-  border-top: 4px solid #d8d8d8;
-  padding-top: 71px;
-}
-.section .with-border-bottom {
-  border-bottom: 4px solid #d8d8d8;
-  padding-bottom: 71px;
-}
-/**
  * Medium +
  */
 @media screen and (min-width: 992px) {
@@ -296,15 +283,6 @@ input:focus {
  *
  * Responsive style definitions for contact links component.
  */
-.contact-links .section {
-  padding-bottom: 0;
-}
-.contact-links .with-border-bottom {
-  padding-bottom: 40px;
-}
-.contact-links .with-border-top {
-  padding-top: 40px;
-}
 .contact-links .contact-list {
   list-style: none;
   margin: 0 auto;
@@ -389,10 +367,6 @@ input:focus {
  *
  * Responsive style definitions for forum component.
  */
-.forum .section {
-  padding-bottom: 0;
-  padding-top: 0;
-}
 .forum h6 {
   font-weight: 300;
 }
@@ -774,18 +748,18 @@ input:focus {
 .overview .section {
   color: #ffffff;
 }
+.overview .section.section-peach {
+  background: #ff6b6b;
+  margin-top: -40%;
+  padding-top: 48%;
+  padding-bottom: 58px;
+}
 .overview .section p {
   font-family: "San Francisco", sans-serif;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   margin: 27px 0 0;
-}
-.overview .section-peach {
-  background: #ff6b6b;
-  margin-top: -40%;
-  padding-top: 48%;
-  padding-bottom: 58px;
 }
 .overview .public-private .section h5 {
   font-style: italic;
@@ -827,7 +801,7 @@ input:focus {
     right: -14px;
     top: 18px;
   }
-  .overview .section-peach {
+  .overview .section.section-peach {
     background: #ff6b6b;
     margin-top: 0;
     padding-bottom: 122px;
@@ -1004,12 +978,32 @@ input:focus {
  *
  * Responsive style definitions for home template.
  */
+/**
+ * Local variables
+ */
+.page-home .section {
+  padding-bottom: 71px;
+  padding-top: 71px;
+}
+.page-home .section h6.subtitle {
+  font-style: italic;
+  margin-bottom: 60px;
+}
+.page-home .section .with-border-top {
+  border-top: 4px solid #d8d8d8;
+}
+.page-home .section .with-border-bottom {
+  border-bottom: 4px solid #d8d8d8;
+}
 .page-home figure {
   margin-bottom: 85px;
   text-align: center;
 }
 .page-home figure.last-child {
   margin-bottom: 0;
+}
+.page-home figure .image-wrapper {
+  margin: 0 auto;
 }
 .page-home figure img {
   margin: 0 auto;
@@ -1026,6 +1020,22 @@ input:focus {
   margin: 25px 0 0;
   text-align: center;
 }
+.page-home .forum .section {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.page-home .forum .section .with-border-top {
+  padding-bottom: 71px;
+  padding-top: 71px;
+}
+.page-home .contact-links .section {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.page-home .contact-links .section .with-border-top {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
 /**
  * Small +
  */
@@ -1040,9 +1050,6 @@ input:focus {
 @media screen and (min-width: 992px) {
   .page-home .section {
     padding-bottom: 125px;
-    padding-top: 125px;
-  }
-  .page-home .with-border-top {
     padding-top: 125px;
   }
   .page-home figure {
@@ -1077,6 +1084,9 @@ input:focus {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
+  .page-home figure .hover .button:hover {
+    color: #1a535c;
+  }
   .page-home figure .hover:hover:before {
     opacity: 1;
   }
@@ -1092,6 +1102,10 @@ input:focus {
   }
   .page-home figure img {
     width: 100%;
+  }
+  .page-home .forum .section .with-border-top {
+    padding-bottom: 125px;
+    padding-top: 125px;
   }
 }
 /**
@@ -1129,13 +1143,11 @@ input:focus {
   margin-top: 25px;
   width: 100%;
 }
-.page-post .contact-links .section {
-  padding: 10px 0px;
+.page-post .contact-links .section .with-border-bottom {
+  border-bottom: 0px;
 }
-.page-post .contact-links .section .contact-list {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
+.page-post .contact-links .section .with-border-top {
+  border-top: 4px solid #f7fff7;
 }
 .page-post .contact-links .section .contact-list li {
   display: block;
@@ -1145,8 +1157,6 @@ input:focus {
   color: rgba(26, 83, 92, 0.57);
   display: block;
   font-size: 1.4rem;
-  font-weight: 700;
-  padding: 15px 0;
 }
 .page-post .contact-links .section .contact-list li .icon:before {
   background: url("/assets/image/site/sprite-social-aqua.png") no-repeat;
@@ -1159,12 +1169,4 @@ input:focus {
 }
 .page-post .contact-links .section .contact-list li .icon-github:before {
   background-position: -3px;
-}
-.page-post .contact-links .section .with-border-bottom {
-  border-bottom: 0px;
-  padding-bottom: 40px;
-}
-.page-post .contact-links .section .with-border-top {
-  border-top: 4px solid #f7fff7;
-  padding-top: 40px;
 }

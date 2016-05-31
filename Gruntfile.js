@@ -30,7 +30,8 @@ module.exports = function (grunt) {
             less: {
                 files: [
                     "assets/less/component/**/*.less",
-                    "assets/less/core/**/*.less"
+                    "assets/less/core/**/*.less",
+                    "assets/less/template/**/*.less"
                 ],
                 tasks: ["less:dev"]
             }

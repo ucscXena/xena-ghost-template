@@ -4,14 +4,42 @@
  * Responsive style definitions for home template.
  */
 
-.page-home {
+/**
+ * Local variables
+ */
+@section-padding: 71px;
 
+.page-home {
+    .section {
+        padding-bottom: @section-padding;
+        padding-top: @section-padding;
+        // Set up standard for h6 "subtitle" inside sections
+        h6 {
+            &.subtitle {
+                font-style: italic;
+                margin-bottom: 60px;
+            }
+        }
+        // Adds border to bottom of content inside section
+        // TODO revisit - pull base styles out for each home page section, refactor this to mixin, invoke from page-home selector of generalized section styles
+        .with-border-top {
+            border-top: 4px solid @xena-grey;
+        }
+        // Adds border to top of content inside section
+        // TODO revisit - as above with matching with-border-top class
+        .with-border-bottom {
+            border-bottom: 4px solid @xena-grey;
+        }
+    }
     // Figure-related styles. This is currently very specific to home template. May need to revisit and generalize.
     figure {
         margin-bottom: 85px;
         text-align: center; // Center images on devices where image width is < 100%
         &.last-child {
             margin-bottom: 0;
+        }
+        .image-wrapper {
+            margin: 0 auto;
         }
         img {
             margin: 0 auto;
@@ -24,6 +52,28 @@
             .font(2rem, 700);
             margin: 25px 0 0;
             text-align: center;
+        }
+    }
+    // Forum
+    .forum {
+        .section {
+            padding-bottom: 0;
+            padding-top: 0;
+            .with-border-top {
+                padding-bottom: @section-padding;
+                padding-top: @section-padding;
+            }
+        }
+    }
+    // Contact links
+    .contact-links {
+        .section {
+            padding-bottom: 0;
+            padding-top: 0;
+            .with-border-top {
+                padding-bottom: 40px;
+                padding-top: 40px;
+            }
         }
     }
 }
@@ -53,13 +103,9 @@
 
     // Home page
     .page-home {
-        // Shared...
         .section {
-            padding-bottom: @section-padding; // Off the mocks - generalizing for reuse by all sections
-            padding-top: @section-padding; // Off the mocks - generalizing for reuse by all sections
-        }
-        .with-border-top {
-            padding-top: @section-padding; // Off the mocks, matching with section padding
+            padding-bottom: @section-padding;
+            padding-top: @section-padding;
         }
         figure {
             margin-bottom: 0;
@@ -80,6 +126,9 @@
                     top: 50%;
                     .transform(translate(-50%, -50%));
                     .transition(all 0.3s ease);
+                    &:hover {
+                        color: @xena-green-dark;
+                    }
                 }
                 &:hover {
                     &:before {
@@ -99,6 +148,15 @@
             }
             img {
                 width: 100%; // Maximize for medium +
+            }
+        }
+        // Forum
+        .forum {
+            .section {
+                .with-border-top {
+                    padding-bottom: @section-padding;
+                    padding-top: @section-padding;
+                }
             }
         }
     }

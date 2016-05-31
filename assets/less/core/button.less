@@ -8,6 +8,7 @@
     background: @xena-peach;
     border: none;
     color: @xena-white;
+    display: inline-block;
     .font(2rem, 700);
     outline: none;
     max-width: 174px;
@@ -15,9 +16,11 @@
     padding: 13px 20px; // Text line height + 13px padding = 54px height
     text-align: center;
     .rounded(4px);
+    .transition(all 0.3s ease);
     -webkit-appearance: none;
     &:hover {
-        color: #ffffff;
+        color: @xena-green-dark;
+        background-color: @xena-yellow;
     }
     &.button-green-dark {
         background: @xena-green-dark;

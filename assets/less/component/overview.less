@@ -14,16 +14,16 @@
     }
     .section {
         color: @xena-white;
+        &.section-peach {
+            background: @xena-peach;
+            margin-top: -40%; // Scoot up Xena public/private image
+            padding-top: 48%;
+            padding-bottom: 58px; // No mocks - matching with padding top of public/private section, squashing for mobile
+        }
         p {
             .font(2rem, 700);
             margin: 27px 0 0; // Line height + margin = 30px
         }
-    }
-    .section-peach {
-        background: @xena-peach;
-        margin-top: -40%; // Scoot up Xena public/private image
-        padding-top: 48%;
-        padding-bottom: 58px; // No mocks - matching with padding top of public/private section, squashing for mobile
     }
     .public-private {
         .section {
@@ -77,11 +77,13 @@
                 }
             }
         }
-        .section-peach {
-            background: @xena-peach;
-            margin-top: 0; // Reset scoot up on mobile
-            padding-bottom: 122px;
-            padding-top: 107px; // Line height of h6 (18px) + padding top = 99px;
+        .section {
+            &.section-peach {
+                background: @xena-peach;
+                margin-top: 0; // Reset scoot up on mobile
+                padding-bottom: 122px;
+                padding-top: 107px; // Line height of h6 (18px) + padding top = 99px;
+            }
         }
         .public-private {
             background-color: @xena-aqua;
