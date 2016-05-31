@@ -217,6 +217,9 @@ input:focus {
   background: #ff6b6b;
   color: #ffffff;
 }
+.page-home .analyze .section-peach figure figcaption a {
+  color: #ffffff;
+}
 .page-home .graph .section-yellow {
   background: #ffe66d;
   color: #1a535c;
