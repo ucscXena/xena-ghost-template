@@ -134,6 +134,9 @@ input:focus {
   margin: 0 auto;
   width: 90%;
 }
+.page-home figure .button {
+  display: none;
+}
 .page-home figure figcaption {
   font-family: "San Francisco", sans-serif;
   font-size: 2rem;
@@ -217,6 +220,17 @@ input:focus {
   background: #ff6b6b;
   color: #ffffff;
 }
+.page-home .analyze .section-peach figure .image-wrapper {
+  max-height: 270px;
+  max-width: 270px;
+}
+.page-home .analyze .section-peach figure .image-wrapper:before {
+  background-color: rgba(255, 237, 153, 0.89);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
 .page-home .analyze .section-peach figure figcaption a {
   color: #ffffff;
 }
@@ -224,23 +238,23 @@ input:focus {
   background: #ffe66d;
   color: #1a535c;
 }
-.page-home .graph .section-yellow figure .button {
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  left: 50%;
-  position: absolute;
-  top: 50%;
+.page-home .graph .section-yellow figure .image-wrapper {
+  max-height: 229px;
+  max-width: 229px;
 }
-.page-home .graph .section-yellow figure img {
+.page-home .graph .section-yellow figure .image-wrapper:before {
+  background-color: rgba(255, 107, 107, 0.89);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
+}
+.page-home .graph .section-yellow figure img {
   background: #ffed99;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
 }
 .page-home .mailing-list h6 {
   font-weight: 300;
@@ -488,11 +502,6 @@ input:focus {
     margin-bottom: 0;
   }
   .page-home figure .hover:before {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    background-color: rgba(255, 107, 107, 0.89);
     content: "";
     height: 100%;
     position: absolute;
@@ -505,6 +514,16 @@ input:focus {
     transition: opacity 0.3s ease;
   }
   .page-home figure .hover .button {
+    display: block;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -519,8 +538,6 @@ input:focus {
   }
   .page-home figure .image-wrapper {
     margin: 0 auto;
-    max-height: 229px;
-    max-width: 229px;
     position: relative;
   }
   .page-home figure .image-wrapper .button-white {

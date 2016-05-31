@@ -80,6 +80,9 @@ input {
             margin: 0 auto;
             width: 90%;
         }
+        .button {
+          display: none;
+        }
         figcaption {
             .font(2rem, 700);
             margin: 25px 0 0;
@@ -166,6 +169,14 @@ input {
             background: @xena-peach;
             color: @xena-white;
             figure {
+                .image-wrapper {
+                    max-height: 270px;
+                    max-width: 270px;
+                    &:before {
+                        background-color: @xena-yellow-transparent;
+                        .rounded(4px);
+                    }
+                }
                 figcaption {
                     a {
                         color: @xena-white;
@@ -180,16 +191,17 @@ input {
             background: @xena-yellow;
             color: @xena-green-dark;
             figure {
-                .button {
-                    .transform(translate(-50%, -50%));
-                    opacity: 0;
-                    left: 50%;
-                    position: absolute;
-                    top: 50%;
+                .image-wrapper {
+                    max-height: 229px;
+                    max-width: 229px;
+                    &:before {
+                        background-color: @xena-peach-transparent;
+                        .rounded(50%);
+                    }
                 }
                 img {
-                    .rounded(50%);
                     background: @xena-yellow-light;
+                    .rounded(50%);
                 }
             }
         }
@@ -486,8 +498,6 @@ input {
             margin-bottom: 0;
             .hover {
                 &:before {
-                    .rounded(50%);
-                    background-color: @xena-peach-light;
                     content: "";
                     height: 100%;
                     position: absolute;
@@ -496,6 +506,12 @@ input {
                     .transition(opacity 0.3s ease);
                 }
                 .button {
+                    display: block;
+                    left: 50%;
+                    opacity: 0;
+                    position: absolute;
+                    top: 50%;
+                    .transform(translate(-50%, -50%));
                     .transition(all 0.3s ease);
                 }
                 &:hover {
@@ -509,8 +525,6 @@ input {
             }
             .image-wrapper {
                 margin: 0 auto;
-                max-height: 229px;
-                max-width: 229px;
                 position: relative;
                 .button-white {
                     min-width: 158px;
